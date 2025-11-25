@@ -1,0 +1,160 @@
+{
+  "images": [
+    {
+      "id": "hero_localized_stripe_checkout",
+      "section": "hero",
+      "title": "Localized Stripe Checkout for Europe",
+      "aspect_ratio": "16:9",
+      "prompt": "A sleek SaaS-style hero image showing a web checkout screen tailored for European customers. In the center, a large modern payment form card with rounded corners on a dark gradient background. The form shows a country flag selector and dynamically ordered payment methods: for the visible example, a bold iDEAL button at the top, then a Credit / Debit Card option, then a PayPal option. On the left or right side, small floating labels reading 'Netherlands', 'Germany', 'Switzerland' with their country flags. Behind everything, a subtle abstract map of Europe made from thin glowing lines and connected nodes, using neon blue and teal accents. Overall look: Stripe-like fintech UI, dark mode with soft purple and blue gradients, ultra clean, high resolution, no people, no logos.",
+      "style": {
+        "lighting": "soft, slightly glowy neon highlights",
+        "detail_level": "high",
+        "ui_fidelity": "very high, believable product UI",
+        "mood": "confident, technical, calm"
+      }
+    },
+    {
+      "id": "map_europe_payment_methods",
+      "section": "problem",
+      "title": "Europe Payment Method Landscape",
+      "aspect_ratio": "16:9",
+      "prompt": "A modern fintech-style infographic of Europe as a simplified map on a dark background. Countries are outlined with thin glowing lines. Several countries are highlighted with labels and icons: 'NL – iDEAL' with a bank transfer icon, 'DE – SEPA, Sofort' with a bank and bill icon, 'CH – TWINT' with a mobile wallet icon, 'PL – BLIK' with a smartphone payment icon, 'BE – Bancontact' with a debit card icon, 'UK – Cards, Wallets' with a card and Apple/Google Pay style icon. In the center of the map, a small glowing rectangle labeled 'Stripe Checkout' connects to each country with thin curved lines, suggesting routing. Style: flat vector illustration with neon blue, teal and violet accents, dark navy background, minimal text, clean and data-driven, consistent with a Stripe-like SaaS brand.",
+      "style": {
+        "lighting": "subtle glow on country highlights",
+        "detail_level": "medium-high",
+        "ui_fidelity": "diagram/infographic, not real UI",
+        "mood": "analytical, European, networked"
+      }
+    },
+    {
+      "id": "checkout_variant_netherlands",
+      "section": "carousel_local_checkouts",
+      "title": "Localized Checkout – Netherlands",
+      "aspect_ratio": "4:3",
+      "prompt": "A close-up product mockup of a web checkout form specifically tailored for a Dutch customer. The form is a white card on a dark gradient background. At the top of the form: a small Dutch flag and the label 'Netherlands'. Under the total price, payment methods are clearly ordered: a large, colorful iDEAL button at the top, with a row of small bank logos; below it a standard 'Credit / Debit Card' option; below that a 'PayPal' option. The UI is minimal, with rounded corners, subtle shadows, and clean typography. No real brand logos, but generic shapes that clearly suggest these methods. Style: Stripe-inspired, modern fintech, no people.",
+      "style": {
+        "lighting": "even, product shot style",
+        "detail_level": "high",
+        "ui_fidelity": "high, realistic web UI",
+        "mood": "precise, localized, trustworthy"
+      }
+    },
+    {
+      "id": "checkout_variant_switzerland",
+      "section": "carousel_local_checkouts",
+      "title": "Localized Checkout – Switzerland",
+      "aspect_ratio": "4:3",
+      "prompt": "A close-up product mockup of a web checkout form tailored for a Swiss customer. The form is a white card floating on a dark, slightly bluish gradient background with very abstract, geometric outlines hinting at mountains. At the top of the form: a small Swiss flag and the label 'Switzerland'. Payment methods are ordered: a bold primary 'TWINT' button at the top with a phone + QR code style icon, below it 'Credit / Debit Card', and then 'Apple Pay'. The design is ultra clean, with rounded corners, soft shadows, and minimal text. No real TWINT or Apple logos, only generic but recognizable metaphor icons. Overall style aligned with Stripe-like fintech product shots.",
+      "style": {
+        "lighting": "soft, slightly dramatic from above",
+        "detail_level": "high",
+        "ui_fidelity": "high, realistic",
+        "mood": "premium, Swiss, modern"
+      }
+    },
+    {
+      "id": "checkout_variant_germany",
+      "section": "carousel_local_checkouts",
+      "title": "Localized Checkout – Germany",
+      "aspect_ratio": "4:3",
+      "prompt": "A close-up of a modern web checkout panel designed for a German customer. The panel is a rounded white card on a dark neutral background with a faint grid pattern. At the top, a small German flag with the label 'Germany'. The payment options appear in this order: a 'PayPal' style option first with a wallet icon, a 'SEPA Direct Debit (Lastschrift)' option second with a bank debit icon, a 'Sofort' style bank-transfer option third, and finally 'Credit / Debit Card'. Labels use short German words where appropriate but remain minimal. No branded logos, only generic icons. Style: clean, fintech UI, harmonious with other LocalePay checkout images.",
+      "style": {
+        "lighting": "neutral, clear",
+        "detail_level": "high",
+        "ui_fidelity": "high",
+        "mood": "trustworthy, structured"
+      }
+    },
+    {
+      "id": "flow_localePay_architecture",
+      "section": "how_it_works",
+      "title": "LocalePay Architecture Flow",
+      "aspect_ratio": "16:9",
+      "prompt": "A clean horizontal flow diagram on a dark gradient background representing how LocalePay works with Stripe. On the left, an icon of a user silhouette combined with a small laptop and phone, labeled 'Customer (country, currency, device)'. In the middle, a glowing rounded square labeled 'LocalePay – payment rules engine', surrounded by tiny icons of sliders, rules, and analytics. On the right, a larger rounded rectangle labeled 'Stripe + Payment Methods', containing simple generic icons for card, bank, and wallet. Thin curved arrows connect Customer → LocalePay → Stripe. The whole diagram is minimalist, with neon blue and teal accents, thin white lines, and a Stripe-like fintech aesthetic. No clutter, no extra text.",
+      "style": {
+        "lighting": "subtle glow on the LocalePay node",
+        "detail_level": "medium-high",
+        "ui_fidelity": "diagram, not app UI",
+        "mood": "technical, clear, infrastructural"
+      }
+    },
+    {
+      "id": "chart_conversion_uplift",
+      "section": "roi",
+      "title": "Conversion Uplift Bar Chart",
+      "aspect_ratio": "4:3",
+      "prompt": "A simple, modern bar chart placed inside a fintech-style dashboard card on a dark background. The card shows two vertical bars side by side. Left bar labeled 'Card-first checkout' at 60%, in a muted grey-blue color. Right bar labeled 'LocalePay local-first checkout' at 66%, in a bright accent color with an upward arrow on top. Beneath the chart, small labels: 'Germany', 'Netherlands', 'Switzerland' in small caps with tiny flag icons. Around the chart, faint grid lines and subtle numeric labels. Style: minimalist, data-driven, no 3D effects, consistent with Stripe-like analytics UI.",
+      "style": {
+        "lighting": "subtle vignette, focus on chart",
+        "detail_level": "medium",
+        "ui_fidelity": "high, dashboard-like",
+        "mood": "analytical, convincing"
+      }
+    },
+    {
+      "id": "pricing_tiers_cards",
+      "section": "pricing",
+      "title": "Pricing Tier Cards",
+      "aspect_ratio": "16:9",
+      "prompt": "Three vertical pricing tiles side by side on a clean dark-to-light gradient background. Left tile labeled 'Starter', middle tile 'Growth', right tile 'Scale'. Each tile is a rounded card with a simple icon at the top: a small seedling for Starter, a growing plant for Growth, a full tree for Scale. Below each icon, a large euro price placeholder (e.g. '€49', '€199', '€399') without extra text. Colors: white or very light surface cards with subtle shadows, accented by the main brand colors (indigo, teal, violet) for highlights. The overall feeling is clear, modern, and harmonious with other LocalePay visuals.",
+      "style": {
+        "lighting": "soft, even",
+        "detail_level": "medium",
+        "ui_fidelity": "high, stylized pricing UI",
+        "mood": "simple, transparent, premium"
+      }
+    },
+    {
+      "id": "comparison_stripe_diy_localePay",
+      "section": "comparison",
+      "title": "Stripe vs DIY vs LocalePay Comparison Visual",
+      "aspect_ratio": "16:9",
+      "prompt": "Three minimal comparison cards in a row on a dark neutral background. Left card labeled 'Stripe default' with a simple icon of a plain card-only checkout (one generic payment icon). Middle card labeled 'DIY' with a slightly messy flowchart icon showing many small nodes and arrows, suggesting complexity. Right card labeled 'LocalePay' with a clean, glowing router/switch icon sending lines to multiple payment method icons (card, bank, wallet) in an orderly fashion. Each card uses the same rounded shape and layout; only the icons differ. Accent colors: muted blue for Stripe default, grey-orange for DIY, bright teal/indigo glow for LocalePay. Style: flat, vector-like, consistent with the rest of the brand.",
+      "style": {
+        "lighting": "subtle spotlight on LocalePay card",
+        "detail_level": "medium",
+        "ui_fidelity": "conceptual cards, not app UI",
+        "mood": "comparative, clear, persuasive"
+      }
+    },
+    {
+      "id": "developer_integration_code",
+      "section": "integration",
+      "title": "Developer Integration Code Visual",
+      "aspect_ratio": "16:9",
+      "prompt": "A high-end developer-focused visual of a code editor window floating on a dark gradient background. The editor shows highlighted pseudo-code for an API call, such as 'const config = getPaymentConfig(country, currency, device);' and then using that config to render Stripe payment methods. On the right side of the editor, a slim sidebar panel with toggles for generic payment methods: 'iDEAL', 'TWINT', 'SEPA', 'BLIK', 'Card', each with small switch icons. The overall scene includes subtle icons for API, settings, and analytics around the editor, but remains minimal. Colors: dark editor with syntax highlighting in teal, purple, and blue, matching the brand palette.",
+      "style": {
+        "lighting": "focused glow on code area",
+        "detail_level": "high",
+        "ui_fidelity": "developer tooling look",
+        "mood": "technical, empowering"
+      }
+    },
+    {
+      "id": "mobile_checkout_wallet_local",
+      "section": "mobile_focus",
+      "title": "Mobile Checkout with Wallet + Local Method",
+      "aspect_ratio": "9:16",
+      "prompt": "A smartphone mockup in portrait orientation on a dark blurred background. The phone screen shows a mobile checkout UI with one-tap payment buttons. At the top of the screen, a large Apple Pay / Google Pay style button, directly below it a prominent local method button (for example, TWINT or iDEAL depicted as a generic mobile wallet icon with local label), and below that a 'Card' option. The design is very clean and minimal, with rounded buttons and clear hierarchy. Slight glow around the main buttons to suggest ease and speed. No brand logos, generic but recognizable icons. Overall look consistent with Stripe-like fintech marketing.",
+      "style": {
+        "lighting": "subtle glow around phone",
+        "detail_level": "high",
+        "ui_fidelity": "high, realistic mobile UI",
+        "mood": "fast, convenient, modern"
+      }
+    },
+    {
+      "id": "testimonials_background_eu_network",
+      "section": "testimonials_background",
+      "title": "EU Network Background for Testimonials",
+      "aspect_ratio": "16:9",
+      "prompt": "A soft, abstract background illustration for a testimonials or logos section. A stylized, semi-transparent outline of Europe made of thin glowing lines and small nodes, placed off-center. A few nodes are slightly brighter, hinting at major hubs like Amsterdam, Berlin, Zurich, London, but without text labels. Around the map, faint grid lines and subtle circular gradients. Colors are muted purples, navy, and teal, low contrast so that overlaid text and logo cards remain readable. No people, no UI, just an elegant fintech data network vibe.",
+      "style": {
+        "lighting": "gentle, low contrast",
+        "detail_level": "medium",
+        "ui_fidelity": "background illustration",
+        "mood": "elegant, European, trustworthy"
+      }
+    }
+  ]
+}

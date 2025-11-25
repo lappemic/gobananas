@@ -1,0 +1,42 @@
+{
+  "style_guide": {
+    "brand_keywords": [
+      "Stripe-like",
+      "modern SaaS",
+      "fintech",
+      "clean",
+      "minimal",
+      "data-driven",
+      "EU-focused"
+    ],
+    "palette": {
+      "background": ["#050816", "#060818", "#0B1020"],
+      "primary_accents": ["#4F46E5", "#6366F1", "#22D3EE"],
+      "secondary_accents": ["#06B6D4", "#A855F7"],
+      "neutrals": ["#FFFFFF", "#E5E7EB", "#9CA3AF", "#4B5563"]
+    },
+    "ui_style": {
+      "mode": "dark-first with light surfaces",
+      "shapes": "rounded-rectangle cards, subtle depth, soft shadows",
+      "charts": "simple, flat, no heavy 3D, clear labels",
+      "icons": "thin line icons, geometric, minimal"
+    },
+    "typography_feel": [
+      "bold, confident headings",
+      "light, readable body",
+      "inspired by Stripe / Linear / Vercel"
+    ],
+    "visual_motifs": [
+      "abstract map of Europe made of thin glowing lines",
+      "nodes and connections representing customers and payment methods",
+      "payment badges: card, bank, wallet icons, country flags",
+      "subtle grid / data overlays"
+    ],
+    "avoid": [
+      "real people or faces",
+      "stock photos of offices/handshakes",
+      "overly playful/illustrative cartoons",
+      "messy colors or gradients that clash with palette"
+    ]
+  }
+}
