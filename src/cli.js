@@ -112,6 +112,7 @@ async function generateCommand(options) {
     console.log(chalk.gray(`  Output: ${options.output}`));
     console.log(chalk.gray(`  Model: ${options.model}`));
     console.log(chalk.gray(`  Image Size: ${options.size}`));
+    console.log(chalk.gray(`  Concurrency: ${options.concurrency} parallel requests`));
 
     // Check for existing progress
     const tracker = new ProgressTracker(options.output);
@@ -161,6 +162,7 @@ async function generateCommand(options) {
 
     const results = await generator.generateBatch(styleGuide, images, {
       freshStart,
+      concurrency: parseInt(options.concurrency, 10),
       onProgress: (msg) => console.log(chalk.gray(`  ${msg}`)),
       onImageStart: (img, current, total) => {
         console.log(chalk.blue(`\n[${current}/${total}] Processing: ${img.title}`));
@@ -266,6 +268,7 @@ program
   )
   .option("-m, --model <model>", "Model to use", "gemini-3-pro-image-preview")
   .option("--size <size>", "Image size: 1K, 2K, or 4K", "2K")
+  .option("-c, --concurrency <number>", "Number of parallel requests", "5")
   .option(
     "--interactive",
     "Prompt for reference images before each generation",

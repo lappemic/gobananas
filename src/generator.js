@@ -126,14 +126,20 @@ export class ImageGenerator {
   }
 
   /**
-   * Batch generates all images
+   * Batch generates all images in parallel
    * @param {Object} styleGuide - Style guide object
    * @param {Array} images - Array of image definitions
    * @param {Object} options - Generation options
    * @returns {Object} Results summary
    */
   async generateBatch(styleGuide, images, options = {}) {
-    const { onProgress, onImageStart, getReferenceImages, freshStart } = options;
+    const {
+      onProgress,
+      onImageStart,
+      getReferenceImages,
+      freshStart,
+      concurrency = 5
+    } = options;
 
     if (freshStart) {
       this.progressTracker.clear();
@@ -148,38 +154,77 @@ export class ImageGenerator {
 
     onProgress?.(`Processing ${remaining.length} images (${results.skipped} already completed)`);
 
-    for (let i = 0; i < remaining.length; i++) {
-      const image = remaining[i];
-      onImageStart?.(image, i + 1, remaining.length);
+    // Collect reference images upfront if interactive mode
+    const imageRefMap = new Map();
+    if (getReferenceImages) {
+      onProgress?.('Collecting reference images for all pending images...');
+      for (let i = 0; i < remaining.length; i++) {
+        const image = remaining[i];
+        onImageStart?.(image, i + 1, remaining.length);
+        const refs = await getReferenceImages(image);
+        imageRefMap.set(image.id, refs);
+      }
+      onProgress?.('Reference images collected. Starting parallel generation...');
+    }
 
-      try {
-        // Get reference images interactively if callback provided
-        let referenceImages = [];
-        if (getReferenceImages) {
-          referenceImages = await getReferenceImages(image);
+    // Process in batches with concurrency limit
+    const chunks = this.chunkArray(remaining, concurrency);
+
+    for (let chunkIndex = 0; chunkIndex < chunks.length; chunkIndex++) {
+      const chunk = chunks[chunkIndex];
+      const chunkStart = chunkIndex * concurrency;
+
+      onProgress?.(`Processing batch ${chunkIndex + 1}/${chunks.length} (${chunk.length} images)...`);
+
+      const promises = chunk.map(async (image, i) => {
+        const globalIndex = chunkStart + i + 1;
+        onImageStart?.(image, globalIndex, remaining.length);
+
+        try {
+          const referenceImages = imageRefMap.get(image.id) || [];
+          const result = await this.generateImage(
+            styleGuide,
+            image,
+            referenceImages,
+            (msg) => onProgress?.(`[${image.id}] ${msg}`)
+          );
+
+          this.progressTracker.markCompleted(image.id);
+          onProgress?.(`Completed: ${image.id}`);
+          return { success: true, result };
+        } catch (err) {
+          this.progressTracker.markFailed(image.id, err.message);
+          onProgress?.(`Failed: ${image.id} - ${err.message}`);
+          return { success: false, imageId: image.id, error: err.message };
         }
+      });
 
-        const result = await this.generateImage(
-          styleGuide,
-          image,
-          referenceImages,
-          onProgress
-        );
+      const chunkResults = await Promise.all(promises);
 
-        this.progressTracker.markCompleted(image.id);
-        results.successful.push(result);
-        onProgress?.(`Completed: ${image.id}`);
-      } catch (err) {
-        this.progressTracker.markFailed(image.id, err.message);
-        results.failed.push({
-          imageId: image.id,
-          error: err.message,
-        });
-        onProgress?.(`Failed: ${image.id} - ${err.message}`);
+      for (const res of chunkResults) {
+        if (res.success) {
+          results.successful.push(res.result);
+        } else {
+          results.failed.push({ imageId: res.imageId, error: res.error });
+        }
       }
     }
 
     return results;
+  }
+
+  /**
+   * Splits array into chunks
+   * @param {Array} array - Array to chunk
+   * @param {number} size - Chunk size
+   * @returns {Array} Array of chunks
+   */
+  chunkArray(array, size) {
+    const chunks = [];
+    for (let i = 0; i < array.length; i += size) {
+      chunks.push(array.slice(i, i + size));
+    }
+    return chunks;
   }
 
   /**
