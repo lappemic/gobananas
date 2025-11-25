@@ -1,17 +1,17 @@
 /**
- * Custom error classes and error handling utilities for stylegen
+ * Custom error classes and error handling utilities for gobanana
  */
 
-const DOCS_URL = 'https://github.com/stylegen/stylegen#readme';
+const DOCS_URL = 'https://github.com/anthropics/gobanana#readme';
 const API_KEY_URL = 'https://aistudio.google.com/app/apikey';
 
 /**
- * Base error class for stylegen
+ * Base error class for gobanana
  */
-export class StylegenError extends Error {
+export class GobananaError extends Error {
   constructor(message, { code, hint, docsSection } = {}) {
     super(message);
-    this.name = 'StylegenError';
+    this.name = 'GobananaError';
     this.code = code;
     this.hint = hint;
     this.docsSection = docsSection;
@@ -32,7 +32,7 @@ export class StylegenError extends Error {
 /**
  * Error for missing or invalid API key
  */
-export class ApiKeyError extends StylegenError {
+export class ApiKeyError extends GobananaError {
   constructor(message) {
     super(message || 'API key is missing or invalid', {
       code: 'API_KEY_ERROR',
@@ -46,11 +46,11 @@ export class ApiKeyError extends StylegenError {
 /**
  * Error for rate limiting
  */
-export class RateLimitError extends StylegenError {
+export class RateLimitError extends GobananaError {
   constructor(message) {
     super(message || 'API rate limit exceeded', {
       code: 'RATE_LIMIT',
-      hint: 'Reduce concurrency with -c flag or wait before retrying.\nExample: stylegen generate -s style.json -i images.json -c 2',
+      hint: 'Reduce concurrency with -c flag or wait before retrying.\nExample: gobanana generate -s style.json -i images.json -c 2',
       docsSection: 'options'
     });
     this.name = 'RateLimitError';
@@ -60,7 +60,7 @@ export class RateLimitError extends StylegenError {
 /**
  * Error for invalid configuration
  */
-export class ConfigError extends StylegenError {
+export class ConfigError extends GobananaError {
   constructor(message, field) {
     super(message, {
       code: 'CONFIG_ERROR',
@@ -74,7 +74,7 @@ export class ConfigError extends StylegenError {
 /**
  * Error for image generation failures
  */
-export class GenerationError extends StylegenError {
+export class GenerationError extends GobananaError {
   constructor(message, imageId) {
     super(message, {
       code: 'GENERATION_ERROR',
@@ -122,7 +122,7 @@ export function parseApiError(err, imageId) {
 
   // Server errors
   if (message.includes('503') || message.includes('500') || message.includes('server')) {
-    return new StylegenError('Google API server error. This is temporary - please retry.', {
+    return new GobananaError('Google API server error. This is temporary - please retry.', {
       code: 'SERVER_ERROR',
       hint: 'The API is temporarily unavailable. Your progress is saved and you can resume later.'
     });
@@ -130,7 +130,7 @@ export function parseApiError(err, imageId) {
 
   // Timeout
   if (message.includes('timeout') || message.includes('timed out')) {
-    return new StylegenError('Request timed out', {
+    return new GobananaError('Request timed out', {
       code: 'TIMEOUT',
       hint: 'The request took too long. Try reducing image complexity or concurrency.'
     });
@@ -146,7 +146,7 @@ export function parseApiError(err, imageId) {
  * @returns {string} Formatted error message
  */
 export function formatErrorForCli(err) {
-  if (err instanceof StylegenError) {
+  if (err instanceof GobananaError) {
     return err.toString();
   }
   return `Error: ${err.message}`;

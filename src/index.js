@@ -1,9 +1,9 @@
 /**
- * stylegen - Programmatic API
+ * gobanana - Programmatic API
  *
  * Usage:
  * ```js
- * import { ImageGenerator, buildPrompt, ProgressTracker } from 'stylegen';
+ * import { ImageGenerator, buildPrompt, ProgressTracker } from 'gobanana';
  *
  * const generator = new ImageGenerator({
  *   apiKey: process.env.GOOGLE_AI_STUDIO_API_KEY,

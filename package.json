@@ -1,5 +1,5 @@
 {
-  "name": "stylegen",
+  "name": "gobanana",
   "version": "1.0.0",
   "description": "Batch generate AI images with consistent style using Google's Gemini API",
   "type": "module",
@@ -12,7 +12,7 @@
     }
   },
   "bin": {
-    "stylegen": "./src/cli.js"
+    "gobanana": "./src/cli.js"
   },
   "scripts": {
     "start": "node src/cli.js",

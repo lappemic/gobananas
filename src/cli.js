@@ -342,7 +342,7 @@ async function dryRunCommand(options) {
 
 // CLI setup
 program
-  .name('stylegen')
+  .name('gobanana')
   .description('Batch generate AI images with consistent style using Gemini API')
   .version('1.0.0');
 
@@ -399,14 +399,14 @@ program
   .command('init')
   .description('Create a config file in the current directory')
   .action(async () => {
-    const configPath = path.join(process.cwd(), '.stylegenrc.json');
+    const configPath = path.join(process.cwd(), '.gobananarc.json');
 
     if (fs.existsSync(configPath)) {
       const { overwrite } = await inquirer.prompt([
         {
           type: 'confirm',
           name: 'overwrite',
-          message: '.stylegenrc.json already exists. Overwrite?',
+          message: '.gobananarc.json already exists. Overwrite?',
           default: false,
         },
       ]);
@@ -420,7 +420,7 @@ program
     fs.writeFileSync(configPath, JSON.stringify(template, null, 2));
     console.log(chalk.green(`Created ${configPath}`));
     console.log(chalk.gray('\nEdit the file to configure your project, then run:'));
-    console.log(chalk.cyan('  stylegen generate'));
+    console.log(chalk.cyan('  gobanana generate'));
   });
 
 program.parse();

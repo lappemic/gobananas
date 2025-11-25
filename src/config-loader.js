@@ -2,10 +2,10 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const CONFIG_FILES = [
-  '.stylegenrc',
-  '.stylegenrc.json',
-  'stylegen.config.json',
-  '.stylegen.json',
+  '.gobananarc',
+  '.gobananarc.json',
+  'gobanana.config.json',
+  '.gobanana.json',
 ];
 
 /**
