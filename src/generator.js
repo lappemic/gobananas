@@ -3,34 +3,69 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { buildPrompt, normalizeAspectRatio } from './prompt-builder.js';
 import { ProgressTracker } from './progress-tracker.js';
+import { ApiKeyError, parseApiError, GenerationError } from './errors.js';
+
+/**
+ * @typedef {import('./types.d.ts').StyleGuide} StyleGuide
+ * @typedef {import('./types.d.ts').ImageDefinition} ImageDefinition
+ * @typedef {import('./types.d.ts').GeneratorOptions} GeneratorOptions
+ * @typedef {import('./types.d.ts').BatchOptions} BatchOptions
+ * @typedef {import('./types.d.ts').GenerationResult} GenerationResult
+ * @typedef {import('./types.d.ts').BatchResults} BatchResults
+ */
 
 const DEFAULT_MODEL = 'gemini-3-pro-image-preview';
 const RETRY_DELAYS = [1000, 2000, 4000]; // Exponential backoff
 
 /**
- * Main image generator class
+ * Main image generator class for batch AI image generation
+ * @example
+ * const generator = new ImageGenerator({ apiKey: 'your-key' });
+ * const results = await generator.generateBatch(styleGuide, images);
  */
 export class ImageGenerator {
+  /**
+   * Creates a new ImageGenerator instance
+   * @param {GeneratorOptions} options - Generator configuration
+   */
   constructor(options = {}) {
     this.apiKey = options.apiKey || process.env.GOOGLE_AI_STUDIO_API_KEY;
     if (!this.apiKey) {
-      throw new Error('GOOGLE_AI_STUDIO_API_KEY is required. Set it via environment variable or options.');
+      throw new ApiKeyError();
     }
 
     this.ai = new GoogleGenAI({ apiKey: this.apiKey });
     this.model = options.model || DEFAULT_MODEL;
     this.outputDir = options.outputDir || './output';
     this.imageSize = options.imageSize || '2K';
+    this.outputFormat = options.outputFormat || 'png';
+    this.filenameTemplate = options.filenameTemplate || '{id}';
     this.progressTracker = new ProgressTracker(this.outputDir);
   }
 
   /**
-   * Generates a single image
-   * @param {Object} styleGuide - Style guide object
-   * @param {Object} image - Image definition
-   * @param {Array} referenceImages - Optional reference image paths
-   * @param {Function} onProgress - Progress callback
-   * @returns {Object} Result with success status and file path
+   * Generates filename from template
+   * @param {ImageDefinition} image - Image definition
+   * @returns {string} Generated filename with extension
+   */
+  generateFilename(image) {
+    const ext = this.outputFormat === 'jpg' ? 'jpg' : this.outputFormat;
+    const filename = this.filenameTemplate
+      .replace('{id}', image.id)
+      .replace('{section}', image.section || 'default')
+      .replace('{title}', (image.title || image.id).replace(/[^a-zA-Z0-9-_]/g, '_'))
+      .replace('{ratio}', (image.aspect_ratio || '16:9').replace(':', 'x'));
+    return `${filename}.${ext}`;
+  }
+
+  /**
+   * Generates a single image from style guide and image definition
+   * @param {StyleGuide} styleGuide - Style guide with brand configuration
+   * @param {ImageDefinition} image - Image definition with prompt and settings
+   * @param {string[]} [referenceImages=[]] - Optional paths to reference images (up to 14)
+   * @param {(message: string) => void} [onProgress] - Progress callback for status updates
+   * @returns {Promise<GenerationResult>} Result with success status and file path
+   * @throws {Error} When API call fails after retries
    */
   async generateImage(styleGuide, image, referenceImages = [], onProgress) {
     const prompt = buildPrompt(styleGuide, image);
@@ -77,7 +112,7 @@ export class ImageGenerator {
         const result = await this.processResponse(response, image);
         return result;
       } catch (err) {
-        lastError = err;
+        lastError = parseApiError(err, image.id);
         if (this.isRetryable(err) && attempt < RETRY_DELAYS.length) {
           continue;
         }
@@ -96,12 +131,15 @@ export class ImageGenerator {
    */
   async processResponse(response, image) {
     if (!response.candidates?.[0]?.content?.parts) {
-      throw new Error('Invalid response structure from API');
+      throw new GenerationError(
+        'Invalid response structure from API. The model may not support image generation.',
+        image.id
+      );
     }
 
     for (const part of response.candidates[0].content.parts) {
       if (part.inlineData) {
-        const filename = `${image.id}.png`;
+        const filename = this.generateFilename(image);
         const filepath = path.join(this.outputDir, filename);
 
         fs.mkdirSync(this.outputDir, { recursive: true });
@@ -111,6 +149,7 @@ export class ImageGenerator {
           success: true,
           filepath,
           imageId: image.id,
+          filename,
         };
       }
     }
@@ -118,19 +157,32 @@ export class ImageGenerator {
     // Check for text-only response (might contain error or safety block)
     for (const part of response.candidates[0].content.parts) {
       if (part.text) {
-        throw new Error(`API returned text instead of image: ${part.text.substring(0, 200)}`);
+        const text = part.text.substring(0, 200);
+        // Check for common safety-related messages
+        if (text.toLowerCase().includes('cannot') || text.toLowerCase().includes('sorry')) {
+          throw new GenerationError(
+            `Content blocked: ${text}. Try simplifying your prompt or removing specific brand references.`,
+            image.id
+          );
+        }
+        throw new GenerationError(`API returned text instead of image: ${text}`, image.id);
       }
     }
 
-    throw new Error('No image data in response');
+    throw new GenerationError('No image data in response. The prompt may be too complex.', image.id);
   }
 
   /**
-   * Batch generates all images in parallel
-   * @param {Object} styleGuide - Style guide object
-   * @param {Array} images - Array of image definitions
-   * @param {Object} options - Generation options
-   * @returns {Object} Results summary
+   * Batch generates all images in parallel with configurable concurrency
+   * @param {StyleGuide} styleGuide - Style guide with brand configuration
+   * @param {ImageDefinition[]} images - Array of image definitions to generate
+   * @param {BatchOptions} [options={}] - Batch generation options
+   * @returns {Promise<BatchResults>} Results summary with successful/failed counts
+   * @example
+   * const results = await generator.generateBatch(styleGuide, images, {
+   *   concurrency: 5,
+   *   onProgress: (msg) => console.log(msg)
+   * });
    */
   async generateBatch(styleGuide, images, options = {}) {
     const {
