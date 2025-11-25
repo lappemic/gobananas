@@ -9,6 +9,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { ImageGenerator } from './generator.js';
 import { ProgressTracker } from './progress-tracker.js';
+import { buildPrompt } from './prompt-builder.js';
+import { loadConfigFile, mergeOptions, getConfigTemplate } from './config-loader.js';
 
 /**
  * Loads and validates JSON file
@@ -89,10 +91,17 @@ async function promptForReferenceImages(image) {
 /**
  * Main generate command
  */
-async function generateCommand(options) {
+async function generateCommand(cliOptions) {
   const spinner = ora();
 
   try {
+    // Load config file and merge with CLI options
+    const configResult = loadConfigFile();
+    if (configResult) {
+      console.log(chalk.gray(`Using config from ${configResult.filepath}`));
+    }
+    const options = mergeOptions(cliOptions, configResult?.config);
+
     // Load configuration files
     spinner.start('Loading configuration files...');
     const styleGuide = loadJson(options.styleGuide);
@@ -112,6 +121,8 @@ async function generateCommand(options) {
     console.log(chalk.gray(`  Output: ${options.output}`));
     console.log(chalk.gray(`  Model: ${options.model}`));
     console.log(chalk.gray(`  Image Size: ${options.size}`));
+    console.log(chalk.gray(`  Format: ${options.format}`));
+    console.log(chalk.gray(`  Filename: ${options.filename}.${options.format}`));
     console.log(chalk.gray(`  Concurrency: ${options.concurrency} parallel requests`));
 
     // Check for existing progress
@@ -155,6 +166,8 @@ async function generateCommand(options) {
       model: options.model,
       outputDir: options.output,
       imageSize: options.size,
+      outputFormat: options.format,
+      filenameTemplate: options.filename,
     });
 
     // Run batch generation
@@ -250,10 +263,87 @@ function clearCommand(options) {
   console.log(chalk.green('Progress cleared'));
 }
 
+/**
+ * Estimates cost based on prompt tokens and image count
+ * Pricing is approximate and may vary
+ */
+function estimateCost(images, prompts) {
+  // Approximate token count (1 token ~ 4 chars)
+  const totalChars = prompts.reduce((sum, p) => sum + p.length, 0);
+  const estimatedTokens = Math.ceil(totalChars / 4);
+
+  // Gemini image generation pricing (approximate, varies by model)
+  // Input: ~$0.00025 per 1K tokens
+  // Output image: ~$0.02 per image (varies by resolution)
+  const inputCost = (estimatedTokens / 1000) * 0.00025;
+  const outputCost = images.length * 0.02;
+  const totalCost = inputCost + outputCost;
+
+  return {
+    imageCount: images.length,
+    estimatedTokens,
+    inputCost,
+    outputCost,
+    totalCost,
+  };
+}
+
+/**
+ * Dry-run command - preview prompts without API calls
+ */
+async function dryRunCommand(options) {
+  try {
+    const styleGuide = loadJson(options.styleGuide);
+    const imagesConfig = loadJson(options.images);
+    const images = imagesConfig.images || imagesConfig;
+
+    console.log(chalk.bold(`\nDry Run: Previewing ${images.length} prompts\n`));
+    console.log(chalk.gray('=' .repeat(60)));
+
+    const prompts = [];
+    for (let i = 0; i < images.length; i++) {
+      const image = images[i];
+      const prompt = buildPrompt(styleGuide, image);
+      prompts.push(prompt);
+
+      console.log(chalk.cyan(`\n[${i + 1}/${images.length}] ${image.title}`));
+      console.log(chalk.gray(`ID: ${image.id}`));
+      console.log(chalk.gray(`Section: ${image.section}`));
+      console.log(chalk.gray(`Aspect Ratio: ${image.aspect_ratio}`));
+      console.log(chalk.gray(`Prompt Length: ${prompt.length} characters`));
+
+      if (options.full) {
+        console.log(chalk.gray('\n--- Full Prompt ---'));
+        console.log(prompt);
+        console.log(chalk.gray('--- End Prompt ---\n'));
+      } else {
+        console.log(chalk.gray(`\nPrompt Preview: ${image.prompt.substring(0, 150)}...`));
+      }
+
+      console.log(chalk.gray('-'.repeat(60)));
+    }
+
+    // Cost estimation
+    const cost = estimateCost(images, prompts);
+    console.log(chalk.bold('\nCost Estimate:'));
+    console.log(chalk.gray(`  Images: ${cost.imageCount}`));
+    console.log(chalk.gray(`  Estimated tokens: ~${cost.estimatedTokens.toLocaleString()}`));
+    console.log(chalk.gray(`  Input cost: ~$${cost.inputCost.toFixed(4)}`));
+    console.log(chalk.gray(`  Output cost: ~$${cost.outputCost.toFixed(2)}`));
+    console.log(chalk.yellow(`  Total estimate: ~$${cost.totalCost.toFixed(2)}`));
+    console.log(chalk.dim('  (Actual costs may vary based on model and settings)'));
+
+    console.log(chalk.gray('\nRun without --dry-run to generate images'));
+  } catch (err) {
+    console.error(chalk.red(`Error: ${err.message}`));
+    process.exit(1);
+  }
+}
+
 // CLI setup
 program
-  .name('nano-banana')
-  .description('Batch image generation with style guides using Gemini API')
+  .name('stylegen')
+  .description('Batch generate AI images with consistent style using Gemini API')
   .version('1.0.0');
 
 program
@@ -269,6 +359,8 @@ program
   .option("-m, --model <model>", "Model to use", "gemini-3-pro-image-preview")
   .option("--size <size>", "Image size: 1K, 2K, or 4K", "2K")
   .option("-c, --concurrency <number>", "Number of parallel requests", "5")
+  .option("-f, --format <format>", "Output format: png, jpg, webp", "png")
+  .option("--filename <template>", "Filename template: {id}, {section}, {title}, {ratio}", "{id}")
   .option(
     "--interactive",
     "Prompt for reference images before each generation",
@@ -294,5 +386,41 @@ program
   .description('Clear generation progress')
   .option('-o, --output <path>', 'Output directory', './output')
   .action(clearCommand);
+
+program
+  .command('dry-run')
+  .description('Preview prompts without making API calls')
+  .requiredOption('-s, --style-guide <path>', 'Path to style guide JSON file')
+  .requiredOption('-i, --images <path>', 'Path to images definition JSON file')
+  .option('--full', 'Show full prompts instead of previews', false)
+  .action(dryRunCommand);
+
+program
+  .command('init')
+  .description('Create a config file in the current directory')
+  .action(async () => {
+    const configPath = path.join(process.cwd(), '.stylegenrc.json');
+
+    if (fs.existsSync(configPath)) {
+      const { overwrite } = await inquirer.prompt([
+        {
+          type: 'confirm',
+          name: 'overwrite',
+          message: '.stylegenrc.json already exists. Overwrite?',
+          default: false,
+        },
+      ]);
+      if (!overwrite) {
+        console.log(chalk.gray('Cancelled'));
+        return;
+      }
+    }
+
+    const template = getConfigTemplate();
+    fs.writeFileSync(configPath, JSON.stringify(template, null, 2));
+    console.log(chalk.green(`Created ${configPath}`));
+    console.log(chalk.gray('\nEdit the file to configure your project, then run:'));
+    console.log(chalk.cyan('  stylegen generate'));
+  });
 
 program.parse();
