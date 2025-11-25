@@ -1,13 +1,12 @@
 {
   "style_guide": {
     "brand_keywords": [
-      "Stripe-like",
       "modern SaaS",
       "fintech",
       "clean",
       "minimal",
       "data-driven",
-      "EU-focused"
+      "professional"
     ],
     "palette": {
       "background": ["#050816", "#060818", "#0B1020"],
@@ -27,16 +26,16 @@
       "inspired by Stripe / Linear / Vercel"
     ],
     "visual_motifs": [
-      "abstract map of Europe made of thin glowing lines",
-      "nodes and connections representing customers and payment methods",
-      "payment badges: card, bank, wallet icons, country flags",
-      "subtle grid / data overlays"
+      "abstract network of connected nodes",
+      "data visualization elements",
+      "subtle grid overlays",
+      "glowing accent highlights"
     ],
     "avoid": [
       "real people or faces",
-      "stock photos of offices/handshakes",
-      "overly playful/illustrative cartoons",
-      "messy colors or gradients that clash with palette"
+      "stock photos",
+      "overly playful cartoons",
+      "clashing color gradients"
     ]
   }
 }
