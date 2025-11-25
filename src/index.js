@@ -1,9 +1,9 @@
 /**
- * Nano Banana Batch - Programmatic API
+ * stylegen - Programmatic API
  *
  * Usage:
  * ```js
- * import { ImageGenerator, buildPrompt, ProgressTracker } from 'nano-banana-batch';
+ * import { ImageGenerator, buildPrompt, ProgressTracker } from 'stylegen';
  *
  * const generator = new ImageGenerator({
  *   apiKey: process.env.GOOGLE_AI_STUDIO_API_KEY,
