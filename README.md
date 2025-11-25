@@ -304,19 +304,35 @@ Progress is stored in `./output/.progress.json`.
 
 ## Examples
 
-The `examples/` directory contains two complete example sets:
+The `examples/` directory contains a unified style guide with dark/light theme support:
+
+### Unified Style Guide
+The style guide (`examples/style-guide.json`) includes:
+- **Brand placeholder** ("Acme") — customize for your product
+- **Theme selector** — set `"theme": "dark"` or `"theme": "light"`
+- **Both color systems** — dark (glows, deep backgrounds) and light (shadows, white backgrounds)
+- **Shared design tokens** — geometry, typography, iconography, composition rules
 
 ### Dark SaaS Dashboard
 ```bash
 gobanana generate -s examples/style-guide.json -i examples/images.json
 ```
-Dark mode, indigo/cyan accents, glowing elements, fintech aesthetic.
+Dark mode, indigo/cyan accents, glowing elements, premium dashboard aesthetic.
 
 ### Light Minimal Icons
 ```bash
-gobanana generate -s examples/icons-style-guide.json -i examples/icons.json
+gobanana generate -s examples/style-guide.json -i examples/icons.json
 ```
 Light mode, clean vectors, feature icons, process flows, infographics.
+
+To switch themes, edit the `"theme"` field in `style-guide.json`:
+```json
+{
+  "style_guide": {
+    "theme": "light"
+  }
+}
+```
 
 ## License
 

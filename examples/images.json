@@ -3,181 +3,151 @@
     {
       "id": "hero_dashboard",
       "section": "hero",
-      "title": "SaaS Dashboard Hero",
+      "title": "Product Dashboard Hero",
       "aspect_ratio": "16:9",
-      "prompt": "A premium SaaS dashboard interface floating on a deep blue-black gradient background (#050816 to #0A0F1E, 135-degree angle). The main dashboard is a large rounded-rectangle card (24px corner radius) with a semi-transparent dark surface (#1F2937 at 95% opacity) and subtle white border (8% opacity). Inside the card: a clean sidebar on the left with outlined icons (1.5px stroke, white), a header row with metric cards, and a central area with a smooth line chart trending upward. The line chart uses indigo (#6366F1) with a soft glow (20px blur, 40% opacity). Three smaller stat cards float beside the main dashboard, each with 16px corner radius, casting soft shadows downward-right. A subtle 32px grid pattern (1px white lines at 10% opacity) covers the background. Accent colors: indigo (#6366F1) for primary data, cyan (#22D3EE) for secondary highlights. Light source from top-left. Geometric sans-serif typography. No people, no logos, no text sentences.",
+      "prompt": "A premium SaaS hero image on a deep blue-black gradient background (#050816 to #0A0F1E at 135 degrees). In the center, a large floating dashboard panel with 24px rounded corners showing a data visualization interface. The main card displays a line chart trending upward with primary indigo (#6366F1) fill and secondary cyan (#22D3EE) accent line. Three stat cards float nearby showing key metrics with large numbers and small percentage badges. A thin cyan connection line links the main panel to a glowing Acme hub node (rounded square with indigo glow). In the background, a subtle abstract grid rendered as thin cyan lines at 10% opacity with 32px spacing. Soft indigo and cyan glows highlight focal elements. No brand logos — only abstract shapes and data visualizations.",
       "style": {
-        "lighting": "Top-left soft key light, diffuse fill from bottom-right, indigo glow on focal elements",
+        "lighting": "Soft top-left key light, strong indigo glow behind the main panel, subtle cyan flow along connection lines",
         "detail_level": "high",
-        "ui_fidelity": "Production-quality UI mockup with realistic shadows and highlights",
-        "mood": "Confident, premium, intelligent",
-        "color_temperature": "Cool, blue-dominant",
-        "focal_point": "Main dashboard card, positioned slightly left of center"
+        "ui_fidelity": "High-fidelity product-style mockup, abstracted for marketing",
+        "mood": "Premium, engineered, confident",
+        "color_temperature": "Cool, indigo and cyan dominant",
+        "focal_point": "Central dashboard panel with glowing hub node"
       }
     },
     {
-      "id": "feature_analytics",
-      "section": "features",
-      "title": "Analytics Network Visualization",
+      "id": "hero_analytics",
+      "section": "hero",
+      "title": "Analytics Dashboard",
       "aspect_ratio": "16:9",
-      "prompt": "An abstract data visualization on a deep blue-black gradient background (#050816 to #0A0F1E, 135-degree angle). A network of 12-15 nodes connected by smooth bezier curves (1.5px stroke weight, cyan #22D3EE). Nodes are small rounded squares (8px radius) with soft indigo glow (20px blur, 40% opacity). Three central nodes are larger and brighter, representing key metrics, with concentric glow rings suggesting activity. Connection lines have gradient opacity (solid at source, fading to 30% at destination) showing data flow direction. A subtle 32px grid pattern (1px white lines at 10% opacity) in the background. Small floating labels near nodes use uppercase geometric sans-serif text (medium weight). Primary accent: indigo #6366F1. Secondary accent: cyan #22D3EE. All shadows fall down-right. No people, no logos.",
+      "prompt": "An Acme analytics dashboard floating over the deep fintech gradient background (#050816). The main card shows a world map on the left with three highlighted regions using cyan nodes and labels. On the right side of the card, a vertical comparison chart shows metrics before and after: split bars showing improvement from 60% to 72% with a green (#10B981) '+20% uplift' badge. Below, a small row of region chips displays granular data. Two smaller stat cards float nearby: one labeled 'Revenue' with a large green number, another showing 'Active Users' with a mini bar chart. Dark surface cards (#1F2937), white (#F9FAFB) and indigo text, cyan accent lines. A subtle 32px grid in the background reinforces structure.",
       "style": {
-        "lighting": "Ambient glow from nodes, subtle top-left bias, no harsh shadows",
+        "lighting": "Soft top-left light, gentle indigo glow behind main card, subtle reflections on card edges",
+        "detail_level": "high",
+        "ui_fidelity": "Production-quality dashboard mockup",
+        "mood": "Analytical, credible, ROI-focused",
+        "color_temperature": "Cool, with green for success metrics",
+        "focal_point": "Comparison chart on the main card"
+      }
+    },
+    {
+      "id": "feature_network_map",
+      "section": "features",
+      "title": "Global Network Map",
+      "aspect_ratio": "16:9",
+      "prompt": "An abstract world map on a deep Acme background (#050816), focusing on global reach. Continents are outlined by thin hairline cyan grid lines. Over key regions, glowing nodes with short labels: 'NA / Primary', 'EU / Secondary', 'APAC / Expanding'. Each label sits inside a small rounded pill chip with 8px radius and subtle glow. All nodes connect via smooth curved cyan lines to a central Acme hub node near the center — a glowing 24px-radius rounded square with indigo (#6366F1) fill and a simple routing icon. Labels are short uppercase tags using white text. Low density with only key regions highlighted to avoid clutter.",
+      "style": {
+        "lighting": "Ambient glow from the central hub, secondary glows around key nodes",
         "detail_level": "medium-high",
-        "ui_fidelity": "Abstract diagram, not realistic UI",
-        "mood": "Analytical, networked, intelligent",
-        "color_temperature": "Cool, cyan-indigo dominant",
-        "focal_point": "Central cluster of three bright nodes"
+        "ui_fidelity": "Abstract infographic, not literal geography",
+        "mood": "Expansive, precise, networked",
+        "color_temperature": "Cool cyan with indigo core",
+        "focal_point": "Central Acme hub with radiating connections"
       }
     },
     {
-      "id": "feature_reports",
+      "id": "feature_config_panel",
       "section": "features",
-      "title": "Report Generation Interface",
+      "title": "Configuration Interface",
       "aspect_ratio": "4:3",
-      "prompt": "A floating report interface card on a deep blue-black gradient background (#050816 to #0A0F1E, 135-degree angle). The main card is white (#FFFFFF at 95% opacity) with 16px corner radius and soft shadow falling down-right (elevation level 3). Inside: a header bar with 'Report' label in bold geometric sans-serif, a mini bar chart using indigo (#6366F1) bars with subtle glow, a data table with alternating row backgrounds, and summary metric boxes at the bottom. Two smaller cards float nearby at different depths, showing related charts. All cards share identical 16px corner radius and shadow direction. Thin border on cards (1px, white at 8% opacity). A subtle 32px grid visible in background. Accent highlights in cyan (#22D3EE). Light source from top-left. No people, no logos, minimal text labels only.",
+      "prompt": "A floating configuration panel representing Acme's settings engine on the dark gradient background (#050816). The card is a light surface (#F9FAFB at 95%) with 16px radius, framed by subtle indigo border and glow. At the top, an inline pill label 'Settings' and a dropdown. Below, three configuration rows displayed as chips with icons and colored tags (indigo and cyan). On the right side of the card, a small preview panel shows the resulting output. In the background, faint outlines of additional cards hint at more options. The composition is minimal and readable, with generous negative space.",
       "style": {
-        "lighting": "Soft top-left key light, white cards appear to glow against dark background",
+        "lighting": "Card appears slightly illuminated against dark background, subtle top-left light and soft shadow",
         "detail_level": "high",
-        "ui_fidelity": "High-fidelity product UI mockup",
-        "mood": "Precise, professional, trustworthy",
-        "color_temperature": "Cool with warm white card surfaces",
-        "focal_point": "Main report card, centered"
+        "ui_fidelity": "Near-production-quality configuration UI",
+        "mood": "Controllable, powerful, approachable",
+        "color_temperature": "Cool background with warm white panel",
+        "focal_point": "Configuration list inside the main card"
       }
     },
     {
-      "id": "feature_integrations",
+      "id": "feature_integration_pipeline",
       "section": "features",
-      "title": "Integration Hub Diagram",
+      "title": "Integration Pipeline",
       "aspect_ratio": "4:3",
-      "prompt": "A hub-and-spoke integration diagram on a deep blue-black gradient background (#050816 to #0A0F1E, 135-degree angle). In the center, a glowing rounded square (24px radius) representing the platform core, with indigo (#6366F1) fill and pulsing glow effect (concentric rings fading outward, 20px blur). Eight satellite nodes arranged in a circle around the hub, each a smaller rounded square (12px radius) with dark surface (#1F2937) and 1px white border (8% opacity). Smooth bezier curves (1.5px cyan #22D3EE strokes) connect hub to satellites, with gradient opacity showing flow direction. Each satellite has a simple outlined icon (1.5px stroke): database cylinder, cloud, envelope, chart bars, gear, bracket-code, lightning bolt, bell. Subtle 32px grid in background. All shadows down-right. No people, no logos.",
+      "prompt": "A left-to-right pipeline diagram showing how Acme integrates into a workflow. On the far left, a card labeled 'Input' with a data icon. A cyan curved line flows into the center card labeled 'Acme', a 24px-radius panel glowing indigo with a processing icon. From the Acme card, the line exits to the right into a card labeled 'Output', depicted with a checkmark icon. Below the Output card, secondary cyan lines fan out to small chips labeled 'API', 'Webhook', 'Export'. Each stage has a short one-word label underneath: 'Collect', 'Process', 'Deliver'. The background shows a faint grid and minimal node dots. Clean system diagram aesthetic.",
       "style": {
-        "lighting": "Central glow radiating outward, subtle ambient from top-left",
-        "detail_level": "high",
-        "ui_fidelity": "Technical diagram with polished finish",
-        "mood": "Connected, powerful, systematic",
-        "color_temperature": "Cool, indigo-cyan dominant",
-        "focal_point": "Central glowing hub node"
-      }
-    },
-    {
-      "id": "feature_automation",
-      "section": "features",
-      "title": "Workflow Automation Flow",
-      "aspect_ratio": "4:3",
-      "prompt": "A horizontal workflow diagram on a deep blue-black gradient background (#050816 to #0A0F1E, 135-degree angle). Five sequential nodes arranged left-to-right: trigger (lightning icon), filter (funnel icon), transform (arrows icon), action (gear icon), output (checkmark icon). Each node is a rounded square (16px radius) with dark surface (#1F2937), 1px white border (8% opacity), and contains a centered outlined icon (1.5px stroke, white). Smooth bezier curves (1.5px stroke) connect nodes sequentially, using cyan (#22D3EE) with gradient opacity showing flow direction left-to-right. The central 'transform' node has a subtle indigo glow (20px blur, #6366F1 at 40% opacity) indicating focus. Small uppercase labels below each node. Subtle 32px grid in background. All shadows fall down-right. No people, no logos.",
-      "style": {
-        "lighting": "Even ambient light, subtle glow on central node, top-left bias",
-        "detail_level": "high",
-        "ui_fidelity": "Clean technical diagram",
-        "mood": "Efficient, logical, structured",
-        "color_temperature": "Cool, balanced cyan and white",
-        "focal_point": "Central transform node with glow"
-      }
-    },
-    {
-      "id": "architecture_flow",
-      "section": "how_it_works",
-      "title": "Platform Architecture Overview",
-      "aspect_ratio": "16:9",
-      "prompt": "A three-column architecture diagram on a deep blue-black gradient background (#050816 to #0A0F1E, 135-degree angle). LEFT column: three stacked input nodes (API, webhook, file icons) as rounded squares (12px radius, dark #1F2937 surface). CENTER: a large processing engine card (24px radius) with indigo (#6366F1) border glow (20px blur, 40% opacity), containing small gear and filter icons inside. RIGHT column: three stacked output nodes (dashboard, download, bell icons). Smooth bezier curves (1.5px cyan #22D3EE stroke) flow from left nodes into center, then from center to right nodes, with gradient opacity showing direction. Column labels in uppercase geometric sans-serif: 'INPUT', 'PROCESS', 'OUTPUT'. Subtle 32px grid pattern. All elements cast soft shadows down-right. No people, no logos.",
-      "style": {
-        "lighting": "Central engine has primary glow, ambient top-left light",
+        "lighting": "Ambient light with subtle glow on central Acme card, consistent down-right shadows",
         "detail_level": "medium-high",
-        "ui_fidelity": "Technical architecture diagram",
-        "mood": "Technical, clear, systematic",
-        "color_temperature": "Cool, indigo-cyan balanced",
-        "focal_point": "Central processing engine card"
+        "ui_fidelity": "Technical diagram with UI hints",
+        "mood": "Systematic, clear, reassuring",
+        "color_temperature": "Cool indigo and cyan",
+        "focal_point": "Central Acme panel in the pipeline"
       }
     },
     {
-      "id": "chart_growth",
-      "section": "social_proof",
-      "title": "Growth Metrics Visualization",
+      "id": "feature_automation_flow",
+      "section": "features",
+      "title": "Automation Workflow",
       "aspect_ratio": "4:3",
-      "prompt": "A dashboard card showing growth metrics on a deep blue-black gradient background (#050816 to #0A0F1E, 135-degree angle). Main card is dark surface (#1F2937) with 16px corner radius, 1px white border (8% opacity), soft shadow down-right. Inside: a smooth line chart with upward trend using indigo (#6366F1) stroke (2px weight) and subtle area fill (gradient to transparent). Five data points marked with glowing dots (8px, indigo with 20px glow blur). X-axis shows abbreviated month labels, Y-axis shows values. Below the chart, three small metric cards in a row, each with 12px radius, showing percentage values with cyan (#22D3EE) accent for positive indicators. Subtle 32px grid visible in card background. Geometric sans-serif typography. No people, no logos.",
+      "prompt": "A horizontal workflow diagram on the Acme brand background (#050816) visualizing an automation process. Five nodes from left to right: 'Detect' (sensor icon), 'Analyze' (chart icon), 'Decide' (gear + sliders icon), 'Execute' (play icon), 'Monitor' (dashboard icon). Each node is a dark rounded square card (#1F2937) with thin white border and small glow on the 'Decide' node. Smooth cyan flow lines connect the nodes with small arrows showing direction. Above the 'Decide' node, a tiny label reads 'Acme engine'. Below each node, one-word labels in uppercase. Minimal graphical style with just enough motion and color to feel alive.",
       "style": {
-        "lighting": "Soft top-left, chart line has subtle glow, data points emit light",
+        "lighting": "Soft top-left light with extra glow around the 'Decide' node",
         "detail_level": "medium",
-        "ui_fidelity": "High-fidelity dashboard component",
-        "mood": "Optimistic, analytical, data-driven",
-        "color_temperature": "Cool with warm success indicators",
-        "focal_point": "Line chart with glowing data points"
+        "ui_fidelity": "Abstract but based on UI metaphors",
+        "mood": "Logical, automated, calm",
+        "color_temperature": "Cool cyan and white on dark background",
+        "focal_point": "Central 'Decide' node representing Acme"
+      }
+    },
+    {
+      "id": "comparison_before_after",
+      "section": "comparison",
+      "title": "Before vs After Comparison",
+      "aspect_ratio": "16:9",
+      "prompt": "A side-by-side comparison on the Acme background (#050816). On the left, a dimmer card labeled 'Before' with a simple interface showing basic options. Underneath, a muted badge says '60% efficiency'. The card has a faint desaturated overlay. On the right, a bright card labeled 'With Acme' showing an enhanced interface with more features. Under this card, a green (#10B981) badge says '85% efficiency' with '+42% improvement' in smaller text. A subtle arrow bridges from the left card to the right card. The right card has an indigo glow and appears more elevated.",
+      "style": {
+        "lighting": "Even ambient light, with extra glow around the 'With Acme' card",
+        "detail_level": "medium-high",
+        "ui_fidelity": "Conceptual but believable comparison UI",
+        "mood": "Transformative, persuasive",
+        "color_temperature": "Cool with warm warning tint on the 'Before' side",
+        "focal_point": "Right-hand 'With Acme' card"
+      }
+    },
+    {
+      "id": "developer_code_snippet",
+      "section": "developers",
+      "title": "Developer API Snippet",
+      "aspect_ratio": "16:9",
+      "prompt": "A floating code editor mockup on the deep Acme background (#050816). The editor shows modern dark code UI with 16px rounded corners, three window dots at top-left, and soft shadow. Inside the editor, TypeScript-like code highlights a simple Acme SDK integration: calling 'acme.configure({ region: \"us-east\", mode: \"production\" })' and using the result. Syntax highlighting uses primary indigo (#6366F1) for keywords, cyan (#22D3EE) for strings, purple (#A855F7) for function names, and muted gray (#6B7280) for comments. To the right of the editor, a smaller panel shows the resulting JSON response. A few small icons (API, gear, bracket) float subtly around.",
+      "style": {
+        "lighting": "Code editor panel acts as main light source with subtle glow, ambient top-left light",
+        "detail_level": "high",
+        "ui_fidelity": "Very high, realistic developer tool aesthetic",
+        "mood": "Technical, empowering, precise",
+        "color_temperature": "Cool with bright syntax colors",
+        "focal_point": "Acme API call inside the editor"
       }
     },
     {
       "id": "pricing_tiers",
       "section": "pricing",
-      "title": "Pricing Comparison Cards",
+      "title": "Pricing Tier Cards",
       "aspect_ratio": "16:9",
-      "prompt": "Three pricing cards side-by-side on a deep blue-black gradient background (#050816 to #0A0F1E, 135-degree angle). All cards are white (#FFFFFF at 95% opacity) with 16px corner radius, casting soft shadows down-right. LEFT card (Starter): simple seed icon at top (outlined, 1.5px stroke, gray #6B7280), price below, subtle styling. CENTER card (Pro): slightly elevated with purple (#A855F7) glow border (20px blur, 30% opacity), star icon at top (outlined, 1.5px stroke, purple), 'POPULAR' tag in top corner. RIGHT card (Enterprise): building icon at top (outlined, gray), larger price. Cards spaced evenly with 32px gaps. Inside each card: icon, tier name in bold, price in large numerals, three feature bullets with small checkmarks. Geometric sans-serif typography throughout. No people, no logos.",
+      "prompt": "Three pricing cards for Acme on the deep gradient background (#050816). Each card is a light surface (#F9FAFB) with 16px radius, soft shadow, and subtle border. Left card labeled 'Starter' with a simple icon and small caption. Center card labeled 'Pro', visually emphasized with a soft purple (#A855F7) glow and small 'Most popular' tag. Right card labeled 'Enterprise' with a building icon. All three cards show a large price line, followed by three bullet rows with checkmark icons. Spacing is generous; visuals are minimal, relying on hierarchy and color. Center card clearly stands out yet shares the same geometry.",
       "style": {
-        "lighting": "Even top-left lighting, center card has accent glow",
+        "lighting": "Soft key light from top-left, center card has subtle purple halo, consistent down-right shadows",
         "detail_level": "medium",
         "ui_fidelity": "High-fidelity pricing UI",
-        "mood": "Clear, transparent, premium",
-        "color_temperature": "Cool with purple accent on featured tier",
-        "focal_point": "Center 'Pro' card with glow"
+        "mood": "Transparent, premium, calm",
+        "color_temperature": "Cool with warm-ish white card surface",
+        "focal_point": "Center 'Pro' pricing card"
       }
     },
     {
-      "id": "comparison_visual",
-      "section": "comparison",
-      "title": "Before and After Transformation",
-      "aspect_ratio": "16:9",
-      "prompt": "Two interface cards side-by-side on a deep blue-black gradient background (#050816 to #0A0F1E, 135-degree angle). LEFT card labeled 'Before': dark surface (#1F2937), 16px radius, contains a chaotic arrangement of misaligned elements — scattered chart fragments, overlapping text blocks, inconsistent spacing, no clear hierarchy, desaturated gray tones. A subtle red-orange tint (#F59E0B at 10% opacity) overlay. RIGHT card labeled 'After': white surface (#FFFFFF at 95% opacity), 16px radius, contains the same information beautifully organized — aligned grid, clear hierarchy, proper spacing, clean chart, organized metrics. The 'After' card has a subtle indigo glow (20px blur, #6366F1 at 30% opacity). Labels above each card in uppercase geometric sans-serif. Arrow or transformation indicator between cards. Shadows fall down-right. No people, no logos.",
-      "style": {
-        "lighting": "Even ambient light, 'After' card has positive glow",
-        "detail_level": "medium",
-        "ui_fidelity": "Conceptual comparison mockup",
-        "mood": "Transformative, persuasive, clear contrast",
-        "color_temperature": "Cool, with subtle warm warning on 'Before'",
-        "focal_point": "The 'After' card with its glow"
-      }
-    },
-    {
-      "id": "developer_code",
-      "section": "developers",
-      "title": "Developer API Experience",
-      "aspect_ratio": "16:9",
-      "prompt": "A code editor window floating on a deep blue-black gradient background (#050816 to #0A0F1E, 135-degree angle). The editor is a dark card (#111827) with 16px corner radius and soft shadow down-right. Window has three colored dots in top-left corner (red, yellow, green, small circles). Code inside uses syntax highlighting: keywords in purple (#A855F7), strings in cyan (#22D3EE), functions in indigo (#6366F1), comments in gray (#6B7280). Code shows a simple API call pattern with clean formatting. To the right of the editor, a smaller response preview panel (12px radius, dark #1F2937 surface) showing formatted JSON output with cyan (#22D3EE) keys. Three small floating icons around the scene: terminal bracket, document, gear — all outlined (1.5px stroke, white at 60% opacity). Subtle 32px grid in far background. Geometric monospace font for code. No people, no logos.",
-      "style": {
-        "lighting": "Subtle glow from code editor, ambient top-left light",
-        "detail_level": "high",
-        "ui_fidelity": "Realistic developer tooling aesthetic",
-        "mood": "Technical, empowering, precise",
-        "color_temperature": "Cool with syntax color accents",
-        "focal_point": "Main code editor window"
-      }
-    },
-    {
-      "id": "mobile_app",
-      "section": "mobile",
-      "title": "Mobile Dashboard Experience",
-      "aspect_ratio": "9:16",
-      "prompt": "A smartphone mockup in portrait orientation on a deep blue-black gradient background (#050816 to #0A0F1E, 135-degree angle). Phone frame is dark (#1F2937) with 24px corner radius and soft shadow falling down-right. Screen shows a mobile dashboard: status bar at top, three metric cards in a row (12px radius each) with indigo (#6366F1) accent numbers, a mini line chart in the center with cyan (#22D3EE) line and subtle glow on data points, and three action buttons at bottom (rounded rectangles, 12px radius, indigo fill with white icons). The phone has a subtle outer glow (30px blur, indigo at 20% opacity) suggesting premium quality. Small floating notification badges near the phone (8px radius circles). UI uses geometric sans-serif typography. Consistent 8px spacing grid throughout interface. No people, no logos, no brand marks on phone.",
-      "style": {
-        "lighting": "Phone screen as light source, ambient top-left fill",
-        "detail_level": "high",
-        "ui_fidelity": "High-fidelity mobile UI mockup",
-        "mood": "Modern, accessible, premium",
-        "color_temperature": "Cool with screen warmth",
-        "focal_point": "Phone screen with dashboard"
-      }
-    },
-    {
-      "id": "testimonials_bg",
-      "section": "testimonials",
+      "id": "background_network",
+      "section": "backgrounds",
       "title": "Abstract Network Background",
       "aspect_ratio": "16:9",
-      "prompt": "A subtle abstract background on a deep blue-black gradient (#050816 to #0A0F1E, 135-degree angle). A sparse network of thin connection lines (1px stroke, white at 15% opacity) with smooth bezier curves spanning the composition. Small node dots (4px diameter) at intersections, some with faint indigo glow (#6366F1 at 20% opacity, 20px blur). Three nodes slightly brighter than others, suggesting connection points. A subtle 32px grid pattern (1px white at 5% opacity) creates depth. Soft circular gradient overlays in the corners using muted indigo and cyan (at 10% opacity) add subtle color variation. Very low contrast overall — designed as a background that won't compete with overlaid text or testimonial cards. No UI elements, no icons, no text, no people, no logos.",
+      "prompt": "A subtle abstract network background on the Acme gradient (#050816 to #0A0F1E), designed to sit behind content. Thin, low-opacity white lines form a sparse network of connections with smooth bezier curves. A small cluster of slightly brighter nodes is placed in the middle-left area. Three faint circular gradient spots in indigo (#6366F1) and cyan (#22D3EE) provide soft color variation, but overall contrast is low. No text, no UI elements, no logos. Enough detail to feel premium and intentional without distracting from overlaid content.",
       "style": {
-        "lighting": "Very subtle ambient glow from scattered nodes",
+        "lighting": "Very soft, evenly distributed ambient light, with faint glow on a few nodes",
         "detail_level": "low-medium",
-        "ui_fidelity": "Abstract background texture",
-        "mood": "Elegant, subtle, trustworthy",
-        "color_temperature": "Cool, muted, low saturation",
-        "focal_point": "No single focal point — even distribution for background use"
+        "ui_fidelity": "Abstract background texture only",
+        "mood": "Elegant, quiet, trustworthy",
+        "color_temperature": "Cool and desaturated",
+        "focal_point": "No strong focal point — designed as supporting background"
       }
     }
   ]

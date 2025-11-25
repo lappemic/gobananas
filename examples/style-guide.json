@@ -1,165 +1,227 @@
 {
   "style_guide": {
-    "brand_essence": {
-      "keywords": ["precision", "clarity", "intelligence", "premium", "trustworthy"],
-      "personality": "A sophisticated data platform that feels like a high-end instrument — precise, powerful, yet approachable. Think Bloomberg Terminal meets Linear's elegance.",
-      "visual_metaphor": "Light emerging from structured darkness — data illuminating decisions"
+    "brand": {
+      "name": "Acme",
+      "tagline": "Your product tagline here",
+      "keywords": ["premium", "minimal", "modern", "data-driven", "trustworthy"],
+      "personality": "Acme feels like a precision instrument: calm, confident, and powerful. Built for professionals who value clarity and results over decoration.",
+      "visual_metaphor": "Data flowing through a clean, structured system — complexity made simple, chaos transformed into clarity."
     },
 
-    "color_system": {
-      "backgrounds": {
-        "deep": "#050816",
-        "medium": "#0A0F1E",
-        "elevated": "#111827",
-        "gradient_direction": "135deg (top-left to bottom-right)",
-        "gradient_formula": "linear-gradient(135deg, #050816 0%, #0A0F1E 50%, #111827 100%)"
+    "theme": "dark",
+
+    "themes": {
+      "dark": {
+        "backgrounds": {
+          "deep": "#050816",
+          "medium": "#0A0F1E",
+          "elevated": "#111827",
+          "gradient_direction": "135deg",
+          "gradient": "linear-gradient(135deg, #050816 0%, #0A0F1E 50%, #111827 100%)"
+        },
+        "surfaces": {
+          "card": "#1F2937",
+          "card_opacity": "94-96% with subtle backdrop blur",
+          "border": "rgba(255,255,255,0.08)"
+        },
+        "accents": {
+          "primary": "#6366F1",
+          "primary_glow": "#818CF8",
+          "secondary": "#22D3EE",
+          "secondary_glow": "#67E8F9",
+          "tertiary": "#A855F7",
+          "success": "#10B981",
+          "warning": "#F59E0B",
+          "error": "#EF4444"
+        },
+        "text": {
+          "primary": "#F9FAFB",
+          "secondary": "#9CA3AF",
+          "muted": "#6B7280",
+          "on_accent": "#FFFFFF"
+        },
+        "effects": {
+          "glow_primary": "0 0 24px rgba(99,102,241,0.50), 0 0 48px rgba(99,102,241,0.25)",
+          "glow_secondary": "0 0 24px rgba(34,211,238,0.50), 0 0 48px rgba(34,211,238,0.25)",
+          "shadow_elevation_1": "0 1px 2px rgba(0,0,0,0.35), 0 1px 3px rgba(0,0,0,0.25)",
+          "shadow_elevation_2": "0 4px 10px rgba(0,0,0,0.45), 0 2px 6px rgba(0,0,0,0.35)",
+          "shadow_elevation_3": "0 10px 30px rgba(0,0,0,0.55), 0 8px 20px rgba(0,0,0,0.45)"
+        }
       },
-      "surfaces": {
-        "card_dark": "#1F2937",
-        "card_light": "#FFFFFF",
-        "card_opacity": "cards use 95% opacity with subtle backdrop blur",
-        "border": "rgba(255,255,255,0.08)"
-      },
-      "accents": {
-        "primary": "#6366F1",
-        "primary_glow": "#818CF8",
-        "secondary": "#22D3EE",
-        "secondary_glow": "#67E8F9",
-        "tertiary": "#A855F7",
-        "success": "#10B981",
-        "warning": "#F59E0B"
-      },
-      "text": {
-        "primary": "#FFFFFF",
-        "secondary": "#9CA3AF",
-        "muted": "#6B7280",
-        "on_accent": "#FFFFFF"
-      },
-      "usage_rules": [
-        "Primary indigo (#6366F1) for interactive elements and key focal points",
-        "Cyan (#22D3EE) for data flows, connections, and secondary highlights",
-        "Purple (#A855F7) sparingly for premium/featured indicators",
-        "Never mix more than 2 accent colors in a single composition"
-      ]
+      "light": {
+        "backgrounds": {
+          "pure": "#FFFFFF",
+          "off_white": "#FAFBFC",
+          "light_gray": "#F3F4F6",
+          "gradient_direction": "180deg",
+          "gradient": "linear-gradient(180deg, #FFFFFF 0%, #FAFBFC 100%)"
+        },
+        "surfaces": {
+          "card": "#FFFFFF",
+          "card_opacity": "95-100%",
+          "border": "rgba(0,0,0,0.08)"
+        },
+        "accents": {
+          "primary": "#3B82F6",
+          "primary_light": "#60A5FA",
+          "secondary": "#10B981",
+          "secondary_light": "#34D399",
+          "tertiary": "#8B5CF6",
+          "success": "#10B981",
+          "warning": "#F59E0B",
+          "error": "#EF4444"
+        },
+        "text": {
+          "primary": "#1E293B",
+          "secondary": "#64748B",
+          "muted": "#94A3B8",
+          "on_accent": "#FFFFFF"
+        },
+        "effects": {
+          "shadow_subtle": "0 1px 2px rgba(0,0,0,0.04)",
+          "shadow_soft": "0 2px 8px rgba(0,0,0,0.06)",
+          "shadow_medium": "0 4px 12px rgba(0,0,0,0.08)",
+          "no_glows": "Light theme uses shadows instead of glows for a clean aesthetic"
+        }
+      }
     },
 
     "geometry": {
       "corner_radius": {
-        "small": "8px — buttons, tags, small elements",
-        "medium": "12px — input fields, small cards",
-        "large": "16px — main cards, panels",
-        "xl": "24px — hero cards, modal containers"
+        "small": "8px — badges, pills, tags, buttons",
+        "medium": "12px — inputs, small cards, chips",
+        "large": "16px — primary cards, panels, charts",
+        "xl": "24px — hero cards, modals, key containers"
       },
-      "shapes": "Exclusively rounded rectangles. No circles except for status dots and avatars. No sharp corners anywhere.",
+      "shapes": "Rounded rectangles dominate. Circles reserved for status dots, avatars, and node indicators. No sharp corners — everything feels considered and engineered.",
+      "grid": {
+        "base_unit": "8px",
+        "spacing": "All padding and margins are multiples of 8px",
+        "icon_grid": "Icons designed on 48x48 or 64x64, snapping to 8px grid"
+      },
       "aspect_ratios": {
-        "cards": "Slightly taller than wide (roughly 4:5 or 3:4)",
-        "feature_panels": "Wide horizontal (16:9)",
-        "icon_containers": "Square with large radius"
+        "square": "1:1 — icons, avatars, small cards",
+        "landscape": "16:9 — hero images, feature panels, flow diagrams",
+        "wide": "21:9 — ultra-wide hero compositions",
+        "portrait": "4:3 or 3:4 — feature cards, infographics"
       }
-    },
-
-    "depth_system": {
-      "elevation_0": "Flat on background, no shadow",
-      "elevation_1": "Subtle lift: 0 1px 2px rgba(0,0,0,0.3), 0 1px 3px rgba(0,0,0,0.15)",
-      "elevation_2": "Cards: 0 4px 6px rgba(0,0,0,0.3), 0 2px 4px rgba(0,0,0,0.2)",
-      "elevation_3": "Floating: 0 10px 25px rgba(0,0,0,0.4), 0 6px 10px rgba(0,0,0,0.3)",
-      "glow_primary": "0 0 20px rgba(99,102,241,0.4), 0 0 40px rgba(99,102,241,0.2)",
-      "glow_cyan": "0 0 20px rgba(34,211,238,0.4), 0 0 40px rgba(34,211,238,0.2)",
-      "glow_subtle": "0 0 30px rgba(99,102,241,0.15)",
-      "rules": [
-        "All floating elements have consistent soft shadow falling down-right (light from top-left)",
-        "Glows are always diffuse and soft, never harsh",
-        "Maximum 3 elevation levels visible in any composition"
-      ]
     },
 
     "line_system": {
       "weights": {
-        "hairline": "1px — grid lines, subtle dividers",
-        "light": "1.5px — connection lines, flow arrows",
-        "medium": "2px — borders, emphasized lines",
-        "bold": "3px — primary paths, key connections"
+        "hairline": "1px — grid lines, subtle dividers, background rails",
+        "primary": "1.5px — main icon outlines, connection lines",
+        "emphasis": "2px — key paths, card borders, highlighted routes",
+        "bold": "3px — primary data flows, hero connections"
       },
-      "connection_style": "Smooth bezier curves with 40% tension. Never straight angular lines between nodes.",
-      "grid_lines": "1px lines at 10% white opacity, 32px spacing",
-      "flow_arrows": "Rounded ends, no sharp arrowheads. Use gradient opacity (solid to transparent) to show direction."
-    },
-
-    "glow_effects": {
-      "node_glow": "Soft 20px blur, accent color at 40% opacity",
-      "line_glow": "8px blur along path, accent color at 30% opacity",
-      "ui_highlight": "Inner glow, 4px blur, white at 10% opacity on top edge",
-      "pulse_effect": "Concentric rings fading outward, used on active/central nodes",
-      "rules": [
-        "Every focal element has exactly one glow source",
-        "Glows always use accent colors, never white",
-        "Glow intensity decreases with distance from focal point"
-      ]
-    },
-
-    "typography_visual": {
-      "headings": "Bold weight (700), tight letter-spacing (-0.02em), large size contrast",
-      "body": "Regular weight (400), comfortable letter-spacing (0), generous line-height (1.6)",
-      "labels": "Medium weight (500), slightly condensed, uppercase for categories",
-      "numbers": "Tabular figures, medium weight, often larger than surrounding text",
-      "style": "Sans-serif only. Geometric grotesque feel (like Inter, SF Pro, or Geist).",
-      "in_images": "Minimal text. When present: short labels only, never sentences. Use hierarchy through size, not font variation."
-    },
-
-    "iconography": {
-      "style": "Outlined icons, 1.5px stroke weight, rounded caps and joins",
-      "size": "Consistent 24px base size, scales to 32px for emphasis, 20px for dense UI",
-      "fill": "Never filled. Outline only with accent color or white.",
-      "common_icons": {
-        "data": "Three ascending bars",
-        "flow": "Horizontal arrow with nodes",
-        "settings": "Gear with rounded teeth",
-        "api": "Angled brackets < >",
-        "cloud": "Simple cloud outline",
-        "chart": "Trending line going up-right"
+      "style": {
+        "caps": "Always rounded caps",
+        "joins": "Always rounded joins",
+        "curves": "Smooth bezier curves with gentle tension — never rigid 90° angles"
+      },
+      "connections": {
+        "flow_direction": "Left-to-right or bottom-left to top-right (implies progress)",
+        "arrows": "Rounded arrowheads or gradient-fade lines (solid at source, 20% at destination)",
+        "grid_lines": "1px at 10% opacity, 32px spacing"
       }
     },
 
-    "composition": {
-      "focal_point": "Every image has ONE clear focal point, slightly above and left of center",
-      "balance": "Asymmetric balance. Primary element 60% of composition, supporting elements 40%.",
-      "negative_space": "Generous margins. At least 15% padding from edges.",
-      "layering": "Maximum 3 distinct layers: background, midground (supporting), foreground (focal)",
-      "perspective": "Slight isometric tilt (10-15 degrees) for UI mockups. Flat for diagrams.",
-      "floating_elements": "Secondary elements float around main focal point, never overlapping it"
+    "depth_system": {
+      "dark_mode": {
+        "primary": "Use glows to create depth and focus",
+        "glow_blur": "20-28px blur radius",
+        "glow_opacity": "35-45% for focal elements, 15-25% for subtle",
+        "shadow_direction": "Down-right (light from top-left)"
+      },
+      "light_mode": {
+        "primary": "Use subtle shadows, no glows",
+        "shadow_blur": "2-12px blur radius",
+        "shadow_opacity": "4-8% black",
+        "shadow_direction": "Straight down or slightly down-right"
+      },
+      "layering": {
+        "max_layers": "3 — background, midground (supporting), foreground (focal)",
+        "hierarchy": "One clear focal point per composition"
+      }
     },
 
-    "animation_hints": {
-      "implied_motion": "Use gradient trails and blur direction to suggest gentle, slow movement",
-      "data_flow": "Lines with gradient opacity (solid at source, fading at destination)",
-      "pulse_nodes": "Concentric glow rings suggest active/processing state",
-      "parallax_depth": "Background elements slightly blurred, foreground sharp"
+    "typography": {
+      "family": "Geometric sans-serif (Inter, SF Pro, Geist style)",
+      "headings": {
+        "weight": "700 (bold)",
+        "tracking": "-0.02em (tight)",
+        "style": "Large size contrast between H1 and body"
+      },
+      "body": {
+        "weight": "400-450",
+        "tracking": "0 (neutral)",
+        "line_height": "1.6"
+      },
+      "labels": {
+        "weight": "500 (medium)",
+        "style": "Uppercase, smaller size",
+        "usage": "Section headers, categories, status indicators"
+      },
+      "numbers": {
+        "style": "Tabular figures",
+        "weight": "600-700",
+        "usage": "Metrics, percentages, data values — often larger than surrounding text"
+      },
+      "in_images": "Minimal text. Short labels and numbers only, never sentences. Hierarchy through weight and size, not font variation."
+    },
+
+    "iconography": {
+      "style": "Outlined icons with rounded caps and joins",
+      "stroke": "1.5px primary, 2px for emphasis",
+      "sizes": {
+        "small": "24px — inline UI icons",
+        "medium": "32px — feature callouts",
+        "large": "48px — hero sections, key features"
+      },
+      "fills": "Mostly outline-only. Occasional low-opacity accent fills for emphasis (20-30% opacity).",
+      "construction": "Built from basic geometry — circles, rounded rectangles, simple paths. No organic or hand-drawn shapes."
+    },
+
+    "composition": {
+      "focal_point": "Every image has ONE clear focal point, positioned slightly left-of-center or at golden ratio intersection.",
+      "balance": "Asymmetric: primary element ~60% visual weight, supporting elements ~40%.",
+      "negative_space": "Generous breathing room. At least 15% padding from edges. Compositions should feel sparse and deliberate, not crowded.",
+      "floating_elements": "Supporting elements (stat chips, badges, icons) float around the main focal point but never overlap key areas.",
+      "perspective": {
+        "ui_mockups": "Slight isometric tilt (10-15 degrees) for depth",
+        "diagrams": "Flat orthographic view",
+        "icons": "Flat, front-facing"
+      }
     },
 
     "consistency_rules": [
-      "ALL images share the same gradient background direction (135deg)",
-      "ALL cards use the same corner radius (16px large radius)",
-      "ALL glows use the same diffusion (20px blur for nodes, 8px for lines)",
-      "ALL connection lines use the same bezier curve tension",
-      "ALL shadows fall in the same direction (down-right, light from top-left)",
-      "ALL UI elements use the exact same spacing unit (8px base grid)",
-      "Color temperature is always cool (no warm oranges/reds except for warnings)",
-      "Maximum saturation for accents is 80%, never fully saturated"
+      "ALL images use the same gradient background direction per theme",
+      "ALL cards share the same corner radius family (8/12/16/24px)",
+      "ALL connection lines use smooth bezier curves, never hard 90° angles",
+      "ALL glows use consistent blur radius (20-28px) and opacity (35-45%)",
+      "ALL shadows fall in the same direction (down-right for dark, down for light)",
+      "ALL elements sit on an 8px spacing grid",
+      "Maximum 2 accent colors per image, plus neutrals",
+      "ALL strokes use rounded caps and joins",
+      "Dark theme: deep blue-black backgrounds, never pure black (#000000)",
+      "Light theme: pure white or off-white backgrounds, never gray-heavy"
     ],
 
     "avoid": [
-      "Realistic photographs or photographic textures",
-      "Human faces, hands, or figures",
+      "Stock photography, realistic photos of people or hands",
       "Brand logos or recognizable company symbols",
-      "Harsh shadows with sharp edges",
-      "Pure black (#000000) — always use deep blue-black (#050816)",
-      "Pure white backgrounds — always tinted slightly blue",
-      "Gradients that shift hue (blue-to-green) — only shift lightness",
-      "Busy patterns or noise textures",
+      "Playful, bubbly shapes or cartoon-style illustrations",
+      "Harsh neon colors or fully saturated accents",
+      "Pure black (#000000) — use deep blue-black instead",
+      "Busy node networks that feel like noise instead of clear data flow",
+      "More than 3 charts or complex elements in a single frame",
+      "Long text or sentences inside images — labels only",
+      "Warm color dominance (oranges/reds) except for warnings",
+      "Sharp corners — everything should feel soft and engineered",
+      "Mixing more than 2 accent hues per composition",
+      "Heavy drop shadows with hard edges",
       "3D renders with specular highlights",
-      "Skeuomorphic elements",
-      "More than 3 accent colors per image",
-      "Text-heavy compositions"
+      "Gradients that shift hue (blue-to-green) — only shift lightness"
     ]
   }
 }

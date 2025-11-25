@@ -1,18 +1,93 @@
 {
   "images": [
     {
+      "id": "icon_integrations",
+      "section": "feature_icons",
+      "title": "Integrations Stack",
+      "aspect_ratio": "1:1",
+      "prompt": "A minimal icon on pure white background (#FFFFFF) representing multiple integrations. Three slightly offset rounded rectangles stacked diagonally, outlined with 1.5px stroke in primary blue (#3B82F6). Each rectangle has a small symbol hint: the top shows a database icon, the middle a cloud glyph, the bottom an API bracket. A thin secondary color (#10B981) line runs down the left side of the stack, connecting all three to a small circle node at bottom, suggesting routing. Very light blue fill at 15% opacity inside the cards. Generous white space, at least 15% padding from bounds. Rounded caps and joins on all strokes.",
+      "style": {
+        "lighting": "Flat, even, no shadows",
+        "detail_level": "low",
+        "ui_fidelity": "Clean vector icon",
+        "mood": "Modular, flexible, technical",
+        "color_temperature": "Cool with blue and green",
+        "focal_point": "Stack of three integration cards"
+      }
+    },
+    {
+      "id": "icon_global",
+      "section": "feature_icons",
+      "title": "Global Reach",
+      "aspect_ratio": "1:1",
+      "prompt": "A simplified globe icon on pure white background (#FFFFFF). A 48px circle contains a minimal abstract world outline made from three gently curved latitude/longitude segments in 1.5px primary blue (#3B82F6) stroke. Three small secondary (#10B981) dots mark different regions around the globe. A thin blue ring hugs the inside of the circle. Very light blue fill at 12% opacity behind the globe. Lots of white space, no text. Rounded stroke caps.",
+      "style": {
+        "lighting": "Flat, no shadow",
+        "detail_level": "low-medium",
+        "ui_fidelity": "Abstract icon, not map-accurate",
+        "mood": "Expansive, connected",
+        "color_temperature": "Cool",
+        "focal_point": "Circle containing globe outline"
+      }
+    },
+    {
+      "id": "icon_growth",
+      "section": "feature_icons",
+      "title": "Growth Metrics",
+      "aspect_ratio": "1:1",
+      "prompt": "A minimal growth icon on white background (#FFFFFF). Two vertical bars side by side with 1.5px primary blue (#3B82F6) stroke: the left bar shorter, the right bar taller. The right bar has a small upward arrow emerging from its top in success green (#10B981). Beneath the bars, a thin baseline in light gray (#E5E7EB). Bar interiors have a soft blue fill at 18% opacity. Percentage labels optional. Simple geometric sans-serif style. Rounded stroke caps.",
+      "style": {
+        "lighting": "Flat and clean",
+        "detail_level": "low",
+        "ui_fidelity": "Infographic icon style",
+        "mood": "Optimistic, quantitative",
+        "color_temperature": "Cool with green success accent",
+        "focal_point": "Taller bar with upward arrow"
+      }
+    },
+    {
+      "id": "icon_automation",
+      "section": "feature_icons",
+      "title": "Automation Engine",
+      "aspect_ratio": "1:1",
+      "prompt": "A gear-and-slider icon on white background (#FFFFFF). A simple 6-tooth gear outlined in primary blue (#3B82F6) with 1.5px stroke sits slightly left of center. Overlapping its right side are two vertical slider tracks: each a track line in light gray with a circular handle in secondary green (#10B981). The gear has a light blue tint at 15% opacity. All shapes have rounded corners and joins. White space at least 15% from icon bounds.",
+      "style": {
+        "lighting": "Flat, no shadows",
+        "detail_level": "low",
+        "ui_fidelity": "Clean, geometric",
+        "mood": "Programmable, controlled",
+        "color_temperature": "Cool",
+        "focal_point": "Gear coupled with sliders"
+      }
+    },
+    {
+      "id": "icon_api",
+      "section": "feature_icons",
+      "title": "API Integration",
+      "aspect_ratio": "1:1",
+      "prompt": "A minimal API icon on white background (#FFFFFF). A rounded rectangle device outline in primary blue (#3B82F6) with 1.5px stroke, representing a terminal or interface. Inside, angled brackets < > with a forward slash between them. A small connection node (circle) attached to one side with a short line suggests connectivity. A tiny secondary green (#10B981) dot in the corner represents status indicator. No logos or brand names. Rounded caps on all strokes.",
+      "style": {
+        "lighting": "Flat",
+        "detail_level": "low",
+        "ui_fidelity": "Abstract API icon",
+        "mood": "Technical, integrated",
+        "color_temperature": "Cool blue with small green accent",
+        "focal_point": "Code brackets in container"
+      }
+    },
+    {
       "id": "icon_security",
       "section": "feature_icons",
       "title": "Security Shield",
       "aspect_ratio": "1:1",
-      "prompt": "A minimal security shield icon on a pure white background (#FFFFFF). The shield is an outlined shape with 1.5px stroke weight in blue (#3B82F6), rounded corners (8px radius at the bottom points), and a small checkmark inside the shield center. The checkmark uses the same 1.5px blue stroke. The shield interior has a very subtle light blue fill (#DBEAFE at 20% opacity) creating a duotone effect. Generous white space around the icon — at least 15% padding from bounds. Clean vector style, geometric shapes only, round stroke caps and joins. No shadows, no gradients, no glow effects. Simple, modern, trustworthy.",
+      "prompt": "A minimal security shield icon on pure white background (#FFFFFF). The shield is an outlined shape with 1.5px primary blue (#3B82F6) stroke, bottom corners softly rounded (8px radius). In the center of the shield, a small checkmark in the same stroke weight. The interior has a very light blue fill at 18% opacity, creating a duotone effect. Plenty of white space around the shape. Rounded stroke caps and joins.",
       "style": {
-        "lighting": "Flat, even, no directional lighting",
+        "lighting": "Flat",
         "detail_level": "low",
         "ui_fidelity": "Clean vector icon",
-        "mood": "Trustworthy, protective, professional",
-        "color_temperature": "Neutral with cool blue accent",
-        "focal_point": "Center — the shield and checkmark"
+        "mood": "Trusted, protective",
+        "color_temperature": "Cool",
+        "focal_point": "Shield with checkmark"
       }
     },
     {
@@ -20,29 +95,14 @@
       "section": "feature_icons",
       "title": "Lightning Speed",
       "aspect_ratio": "1:1",
-      "prompt": "A minimal lightning bolt icon on a pure white background (#FFFFFF). The bolt is a simple geometric zigzag shape with 1.5px stroke weight in blue (#3B82F6), sharp angles softened by round joins. Two small horizontal motion lines (1px stroke, #CBD5E1 gray) trail behind the bolt suggesting speed and movement. The bolt interior has a subtle light blue fill (#DBEAFE at 25% opacity). Generous white space — at least 15% padding. Clean vector style, geometric construction, round stroke caps. No shadows, no 3D effects. Dynamic yet clean and minimal.",
+      "prompt": "A geometric lightning bolt icon in primary blue (#3B82F6) on white background (#FFFFFF), with two short horizontal motion lines trailing behind in light gray (#CBD5E1). The bolt has 1.5px rounded strokes and a pale blue fill at 15% opacity. The icon symbolizes fast performance and instant results. Generous white space, rounded caps on all strokes.",
       "style": {
-        "lighting": "Flat, no shadows",
+        "lighting": "Flat",
         "detail_level": "low",
-        "ui_fidelity": "Clean vector icon",
-        "mood": "Fast, energetic, efficient",
-        "color_temperature": "Neutral with cool blue accent",
-        "focal_point": "Center — the lightning bolt"
-      }
-    },
-    {
-      "id": "icon_sync",
-      "section": "feature_icons",
-      "title": "Real-time Sync",
-      "aspect_ratio": "1:1",
-      "prompt": "A minimal sync/refresh icon on a pure white background (#FFFFFF). Two curved arrows forming a circular rotation pattern, each arrow is a 180-degree arc with an arrowhead pointing in the direction of flow. Strokes are 1.5px weight in blue (#3B82F6) with round caps. The arrows create a complete circle when combined, with small gaps between them. Subtle motion suggested by the circular flow. Clean geometric construction, no fill on the arrows. Generous white space — at least 15% padding from bounds. No shadows, no gradients. Modern, continuous, connected feel.",
-      "style": {
-        "lighting": "Flat, even lighting",
-        "detail_level": "low",
-        "ui_fidelity": "Clean vector icon",
-        "mood": "Connected, continuous, reliable",
-        "color_temperature": "Neutral with cool blue accent",
-        "focal_point": "Center — the rotating arrows"
+        "ui_fidelity": "Vector icon",
+        "mood": "Fast, energetic",
+        "color_temperature": "Cool",
+        "focal_point": "Central lightning bolt"
       }
     },
     {
@@ -50,286 +110,90 @@
       "section": "feature_icons",
       "title": "Analytics Chart",
       "aspect_ratio": "1:1",
-      "prompt": "A minimal bar chart icon on a pure white background (#FFFFFF). Three vertical bars of increasing height (left to right, suggesting growth), sitting on a thin horizontal baseline. Bars have 1.5px stroke weight in blue (#3B82F6) with subtle light blue fill (#DBEAFE at 25% opacity). Bars have small rounded tops (4px radius). A thin trend line (1px stroke, #10B981 emerald) angles upward across the bars suggesting positive growth. Generous white space — at least 15% padding. Clean vector style, geometric shapes, round stroke caps. No shadows, no 3D effects. Data-driven, optimistic, clear.",
+      "prompt": "A simple three-bar chart icon on white background (#FFFFFF). Bars of increasing height from left to right with primary blue (#3B82F6) outlines (1.5px stroke) and light blue fill at 20% opacity, sitting on a gray baseline (#E5E7EB). Above the bars, a thin secondary green (#10B981) trend line with two small circular data points. Clean vector style. Rounded stroke caps.",
       "style": {
-        "lighting": "Flat, no directional shadows",
+        "lighting": "Flat",
         "detail_level": "low",
-        "ui_fidelity": "Clean vector icon",
-        "mood": "Analytical, growth-oriented, clear",
-        "color_temperature": "Neutral with blue and green accents",
-        "focal_point": "Center — the rising bar chart"
-      }
-    },
-    {
-      "id": "icon_api",
-      "section": "feature_icons",
-      "title": "API Access",
-      "aspect_ratio": "1:1",
-      "prompt": "A minimal API/code icon on a pure white background (#FFFFFF). Angled brackets (< >) as the main element with 1.5px stroke weight in blue (#3B82F6), round caps. Between the brackets, a small forward slash (/) in the same style. Two small circular nodes (4px diameter, blue fill) positioned at the outer tips of the brackets, connected by thin dotted lines (1px, #CBD5E1 gray) suggesting connectivity and data exchange. Generous white space — at least 15% padding. Clean vector construction, geometric and technical. No shadows, no gradients. Developer-friendly, technical, accessible.",
-      "style": {
-        "lighting": "Flat, even",
-        "detail_level": "low",
-        "ui_fidelity": "Clean vector icon",
-        "mood": "Technical, accessible, developer-friendly",
-        "color_temperature": "Neutral with cool blue accent",
-        "focal_point": "Center — the code brackets"
-      }
-    },
-    {
-      "id": "icon_cloud",
-      "section": "feature_icons",
-      "title": "Cloud Storage",
-      "aspect_ratio": "1:1",
-      "prompt": "A minimal cloud icon on a pure white background (#FFFFFF). A simple cloud shape made of overlapping circles creating a fluffy silhouette, outlined with 1.5px stroke in blue (#3B82F6), round joins. A small upward arrow centered below the cloud (or emerging from it) indicating upload/storage, same blue stroke. The cloud has a very subtle light blue fill (#DBEAFE at 20% opacity). Clean geometric construction — the cloud is built from 3-4 overlapping circles. Generous white space — at least 15% padding. No shadows, no 3D effects. Reliable, modern, effortless.",
-      "style": {
-        "lighting": "Flat, no shadows",
-        "detail_level": "low",
-        "ui_fidelity": "Clean vector icon",
-        "mood": "Reliable, modern, effortless",
-        "color_temperature": "Neutral with cool blue accent",
-        "focal_point": "Center — the cloud shape"
-      }
-    },
-    {
-      "id": "icon_lock",
-      "section": "feature_icons",
-      "title": "Privacy Lock",
-      "aspect_ratio": "1:1",
-      "prompt": "A minimal padlock icon on a pure white background (#FFFFFF). A rounded rectangle body (8px corner radius) with a U-shaped shackle on top. Strokes are 1.5px weight in blue (#3B82F6), round caps and joins. The lock body has a subtle light blue fill (#DBEAFE at 25% opacity). A small keyhole shape (circle with small triangle below) centered on the lock body in the same blue. Clean geometric construction. Generous white space — at least 15% padding from bounds. No shadows, no gradients. Secure, trustworthy, simple.",
-      "style": {
-        "lighting": "Flat, even lighting",
-        "detail_level": "low",
-        "ui_fidelity": "Clean vector icon",
-        "mood": "Secure, private, trustworthy",
-        "color_temperature": "Neutral with cool blue accent",
-        "focal_point": "Center — the padlock"
-      }
-    },
-    {
-      "id": "icon_team",
-      "section": "feature_icons",
-      "title": "Team Collaboration",
-      "aspect_ratio": "1:1",
-      "prompt": "A minimal team/people icon on a pure white background (#FFFFFF). Two simplified person silhouettes side by side — each is a circle (head) above a rounded shoulder shape. The front/primary person uses 1.5px stroke in blue (#3B82F6), the second person slightly behind uses 1.5px stroke in lighter gray (#94A3B8) to create depth without heaviness. Both figures use round stroke caps. Subtle overlap suggesting collaboration and unity. Generous white space — at least 15% padding. Clean vector style, geometric shapes. No shadows, no facial features. Collaborative, friendly, professional.",
-      "style": {
-        "lighting": "Flat, no shadows",
-        "detail_level": "low",
-        "ui_fidelity": "Clean vector icon",
-        "mood": "Collaborative, friendly, unified",
-        "color_temperature": "Neutral with cool blue accent",
-        "focal_point": "Center — the two figures"
-      }
-    },
-    {
-      "id": "icon_automation",
-      "section": "feature_icons",
-      "title": "Automation Gear",
-      "aspect_ratio": "1:1",
-      "prompt": "A minimal automation icon on a pure white background (#FFFFFF). A gear/cog shape with 6-8 rounded teeth, outlined with 1.5px stroke in blue (#3B82F6). Inside the gear, a small play triangle (pointing right) indicating automation/action. The gear has subtle light blue fill (#DBEAFE at 20% opacity). Teeth have softly rounded tips (4px radius). A small circular motion indicator (dotted arc) near the gear suggesting continuous operation, in light gray (#CBD5E1). Generous white space — at least 15% padding. Clean vector construction. No shadows. Efficient, automatic, smart.",
-      "style": {
-        "lighting": "Flat, even",
-        "detail_level": "low",
-        "ui_fidelity": "Clean vector icon",
-        "mood": "Efficient, automatic, intelligent",
-        "color_temperature": "Neutral with cool blue accent",
-        "focal_point": "Center — the gear with play symbol"
-      }
-    },
-    {
-      "id": "icon_support",
-      "section": "feature_icons",
-      "title": "24/7 Support",
-      "aspect_ratio": "1:1",
-      "prompt": "A minimal customer support icon on a pure white background (#FFFFFF). A headset shape — two ear cups connected by a curved headband, outlined with 1.5px stroke in blue (#3B82F6), round caps and joins. A small chat bubble emerges from one side with three small dots inside (typing indicator), the bubble uses the same blue stroke with subtle fill (#DBEAFE at 25% opacity). Clean geometric construction — headband is a smooth arc, ear cups are rounded rectangles. Generous white space — at least 15% padding. No shadows. Helpful, responsive, always available.",
-      "style": {
-        "lighting": "Flat, no directional lighting",
-        "detail_level": "low",
-        "ui_fidelity": "Clean vector icon",
-        "mood": "Helpful, responsive, approachable",
-        "color_temperature": "Neutral with cool blue accent",
-        "focal_point": "Center — the headset"
-      }
-    },
-    {
-      "id": "icon_mobile",
-      "section": "feature_icons",
-      "title": "Mobile Ready",
-      "aspect_ratio": "1:1",
-      "prompt": "A minimal smartphone icon on a pure white background (#FFFFFF). A rounded rectangle (12px corner radius) representing a phone in portrait orientation, outlined with 1.5px stroke in blue (#3B82F6). Inside the phone screen area, a small checkmark indicating mobile compatibility/success. The phone body has very subtle light blue fill (#DBEAFE at 15% opacity). A thin horizontal line near the bottom suggests the home area. Clean geometric construction. Generous white space — at least 15% padding from bounds. No shadows, no 3D effects. Modern, responsive, accessible.",
-      "style": {
-        "lighting": "Flat, even lighting",
-        "detail_level": "low",
-        "ui_fidelity": "Clean vector icon",
-        "mood": "Modern, accessible, responsive",
-        "color_temperature": "Neutral with cool blue accent",
-        "focal_point": "Center — the smartphone"
-      }
-    },
-    {
-      "id": "icon_integration",
-      "section": "feature_icons",
-      "title": "Easy Integration",
-      "aspect_ratio": "1:1",
-      "prompt": "A minimal integration/puzzle icon on a pure white background (#FFFFFF). Two puzzle pieces connecting together — each piece is a rounded square with one protruding tab and one receiving indent. The left piece uses 1.5px stroke in blue (#3B82F6) with light blue fill (#DBEAFE at 25% opacity). The right piece uses 1.5px stroke in emerald (#10B981) with light green fill (#D1FAE5 at 25% opacity). The pieces are shown mid-connection, almost touching, suggesting seamless integration. Round stroke caps and joins, 8px corner radius on outer edges. Generous white space — at least 15% padding. No shadows. Connected, seamless, compatible.",
-      "style": {
-        "lighting": "Flat, no shadows",
-        "detail_level": "low",
-        "ui_fidelity": "Clean vector icon",
-        "mood": "Connected, seamless, compatible",
-        "color_temperature": "Neutral with blue and green accents",
-        "focal_point": "Center — the connecting puzzle pieces"
+        "ui_fidelity": "Minimal data icon",
+        "mood": "Analytical, clear",
+        "color_temperature": "Cool",
+        "focal_point": "Rising bar cluster with trend line"
       }
     },
 
-    {
-      "id": "flow_onboarding",
-      "section": "process_flows",
-      "title": "User Onboarding Flow",
-      "aspect_ratio": "16:9",
-      "prompt": "A horizontal process flow diagram on a pure white background (#FFFFFF) showing 4 onboarding steps from left to right. Each step is a circle (48px diameter) with a step number inside (1, 2, 3, 4) in semibold geometric sans-serif. Step 1 (Sign Up): user icon inside, blue fill (#3B82F6), white number. Step 2 (Profile): person icon, outlined in blue, white fill. Step 3 (Connect): link/chain icon, outlined in blue, white fill. Step 4 (Dashboard): grid icon, outlined in blue, white fill. Steps connected by thin horizontal lines (1px stroke, #CBD5E1) with small arrow indicators. Short labels below each circle in medium weight (#64748B): 'Sign Up', 'Profile', 'Connect', 'Dashboard'. Equal spacing between steps. The active step (Step 1) has blue fill, others are outlined only. Clean vector style, generous white space above and below the flow. No shadows, no gradients.",
-      "style": {
-        "lighting": "Flat, even, no shadows",
-        "detail_level": "medium",
-        "ui_fidelity": "Clean process diagram",
-        "mood": "Clear, progressive, welcoming",
-        "color_temperature": "Neutral with cool blue accent",
-        "focal_point": "Left side — the first step as entry point"
-      }
-    },
     {
       "id": "flow_data_pipeline",
       "section": "process_flows",
-      "title": "Data Pipeline Flow",
+      "title": "Input → Process → Output Flow",
       "aspect_ratio": "16:9",
-      "prompt": "A horizontal data pipeline diagram on a pure white background (#FFFFFF) showing 4 stages from left to right. Each stage is a rounded rectangle (64px wide, 48px tall, 8px radius) with an icon inside. Stage 1 (Input): database cylinder icon, outlined blue (#3B82F6). Stage 2 (Process): gear icon, blue fill, white icon. Stage 3 (Transform): arrows crossing icon, outlined blue. Stage 4 (Output): export/download icon, outlined blue. Stages connected by arrows — thin lines (1.5px stroke, #94A3B8) with chevron arrowheads pointing right. Data flow particles (small 4px dots in blue, #60A5FA) along the connection lines suggesting movement. Labels below each stage in medium weight (#64748B): 'Input', 'Process', 'Transform', 'Output'. The Process stage (center-left) is highlighted with blue fill. Equal spacing, clean vector style, generous margins. No heavy shadows.",
+      "prompt": "A left-to-right flow diagram on white background (#FFFFFF) showing three main steps. Step 1: a circle with a document/data icon inside, label 'Input' below. Step 2: a rounded square (12px radius) with primary blue (#3B82F6) outline and fill at 10% opacity, label 'Acme' or 'Process', containing a small gear icon. Step 3: a rounded square with light gray outline, label 'Output', containing a checkmark icon. Smooth secondary green (#10B981) curved arrows (1.5px stroke) connect Input → Process → Output using bezier curves. Below the flow, small badges indicate data types flowing through. All icons are simple outlines with rounded caps.",
       "style": {
-        "lighting": "Flat, even lighting",
+        "lighting": "Flat",
         "detail_level": "medium",
-        "ui_fidelity": "Technical process diagram",
-        "mood": "Technical, systematic, efficient",
-        "color_temperature": "Neutral with cool blue accent",
-        "focal_point": "Center-left — the Process stage"
+        "ui_fidelity": "Diagram, not full UI",
+        "mood": "Systemic, explanatory",
+        "color_temperature": "Cool blue and green accents",
+        "focal_point": "Central Process node"
       }
     },
     {
-      "id": "flow_payment",
+      "id": "flow_user_journey",
       "section": "process_flows",
-      "title": "Payment Checkout Flow",
+      "title": "User Journey Steps",
       "aspect_ratio": "16:9",
-      "prompt": "A horizontal payment flow diagram on a pure white background (#FFFFFF) showing 4 steps from left to right. Each step is a rounded square (52px, 12px radius) with an icon inside. Step 1 (Cart): shopping cart icon, outlined blue (#3B82F6). Step 2 (Checkout): credit card icon, outlined blue. Step 3 (Confirm): shield with checkmark, outlined blue. Step 4 (Success): checkmark in circle, emerald fill (#10B981), white checkmark. Steps connected by thin dashed lines (1px, #CBD5E1) with small arrow indicators. The final Success step uses green to indicate completion. Step numbers (1-4) in small circles above each main icon. Labels below in medium weight (#64748B): 'Cart', 'Checkout', 'Confirm', 'Success'. Progress bar underneath showing completion (75% filled in blue, 25% in light gray). Clean vector style, equal spacing, generous white space. No heavy shadows.",
+      "prompt": "A four-step process flow on white background (#FFFFFF), read left-to-right. Each step is a numbered circle (1, 2, 3, 4) above a small icon: 1) 'Discover' with a search/magnifier icon; 2) 'Evaluate' with a checklist icon; 3) 'Activate' with a power/play icon; 4) 'Succeed' with a trophy/star icon. Steps are connected by thin primary blue (#3B82F6) lines (1.5px) with rounded arrowheads. Labels below each step in short uppercase text. The active step (Activate) has filled blue circle with white number; others are outline-only. Rounded caps on all strokes.",
       "style": {
-        "lighting": "Flat, no directional shadows",
+        "lighting": "Flat",
         "detail_level": "medium",
-        "ui_fidelity": "Clean checkout flow diagram",
-        "mood": "Trustworthy, progressive, reassuring",
-        "color_temperature": "Neutral with blue and green accents",
-        "focal_point": "Right side — the Success completion state"
+        "ui_fidelity": "Clean process diagram",
+        "mood": "Clear, methodical, progressive",
+        "color_temperature": "Cool",
+        "focal_point": "Third step 'Activate'"
       }
     },
     {
-      "id": "flow_support",
-      "section": "process_flows",
-      "title": "Support Ticket Journey",
-      "aspect_ratio": "16:9",
-      "prompt": "A horizontal support flow diagram on a pure white background (#FFFFFF) showing 4 stages from left to right. Each stage is a circle (48px diameter) with an icon inside. Stage 1 (Issue): warning triangle icon, outlined in gray (#64748B). Stage 2 (Ticket): document/ticket icon, outlined blue (#3B82F6). Stage 3 (Agent): headset icon, blue fill, white icon — this is the active/current stage. Stage 4 (Resolved): checkmark in circle, emerald outline (#10B981). Stages connected by curved connector lines (1.5px stroke, #CBD5E1) with subtle arrow indicators. A small chat bubble near the Agent stage suggests active communication. Labels below each stage in medium weight (#64748B): 'Issue', 'Ticket', 'Agent', 'Resolved'. The flow shows progression from problem to solution. Clean vector style, generous margins, equal spacing. No heavy shadows or gradients.",
+      "id": "info_metrics_snapshot",
+      "section": "infographic_icons",
+      "title": "Metrics Snapshot",
+      "aspect_ratio": "1:1",
+      "prompt": "A compact infographic on white background (#FFFFFF) showing three vertical metric cards in a row. Each card is a tiny rounded rectangle (8px radius) with an icon at top (chart, users, clock), a number beneath it, and a percentage change badge at the bottom — green (#10B981) for positive. Cards are outlined in light gray (#E5E7EB) with primary blue (#3B82F6) accent highlights. A subtle dashed baseline connects all three cards. Simple geometric sans-serif text. Rounded stroke caps.",
       "style": {
-        "lighting": "Flat, even lighting",
+        "lighting": "Flat",
         "detail_level": "medium",
-        "ui_fidelity": "Clean support flow diagram",
-        "mood": "Helpful, progressive, resolving",
-        "color_temperature": "Neutral with blue and green accents",
-        "focal_point": "Center-right — the Agent stage (active support)"
+        "ui_fidelity": "Mini infographic, not full UI",
+        "mood": "Evidence-based, comparative",
+        "color_temperature": "Neutral with cool highlights",
+        "focal_point": "Row of three metric cards"
       }
     },
-
     {
-      "id": "info_growth",
+      "id": "info_roi",
       "section": "infographic_icons",
-      "title": "Growth Metrics",
+      "title": "ROI Visualization",
       "aspect_ratio": "1:1",
-      "prompt": "A larger infographic illustration on a pure white background (#FFFFFF) showing growth and success. Central element is an upward-trending line chart with 2px stroke in blue (#3B82F6), showing clear upward trajectory from bottom-left to top-right. Three data points marked with filled circles (8px, blue). At the peak, a small star burst or celebration element (thin lines radiating outward in emerald #10B981) suggesting achievement. Below the chart line, a subtle area fill (gradient from #DBEAFE at 30% to transparent). Small floating elements: an upward arrow, a percentage symbol, tiny confetti dots — all in muted colors (#94A3B8, #60A5FA). The composition feels celebratory but clean. Generous white space, clean vector style. No heavy shadows. Optimistic, successful, data-driven.",
+      "prompt": "A small infographic icon on white background (#FFFFFF) showing ROI: a dollar/currency symbol in primary blue (#3B82F6) on the left, and a vertical stack of two rounded rectangles on the right — 'Cost' (small, light gray) and 'Revenue' (larger, primary blue fill at 20% opacity). A green (#10B981) arrow arcs from the small bar to the large bar, indicating positive return. Everything outlined with 1.5px strokes, minimal fill. Rounded caps and joins.",
       "style": {
-        "lighting": "Flat with subtle highlight on peak",
-        "detail_level": "medium-high",
-        "ui_fidelity": "Polished infographic illustration",
-        "mood": "Optimistic, successful, celebratory",
-        "color_temperature": "Neutral with blue and green accents",
-        "focal_point": "Upper right — the growth peak with celebration elements"
+        "lighting": "Flat",
+        "detail_level": "medium",
+        "ui_fidelity": "Simple ROI diagram",
+        "mood": "Efficient, value-focused",
+        "color_temperature": "Cool with green success",
+        "focal_point": "Stacked ROI bars with arrow"
       }
     },
     {
-      "id": "info_global",
-      "section": "infographic_icons",
-      "title": "Global Reach",
-      "aspect_ratio": "1:1",
-      "prompt": "A larger infographic illustration on a pure white background (#FFFFFF) showing global connectivity. Central element is a simplified globe — a circle (80px diameter) with subtle latitude/longitude grid lines (1px stroke, #E2E8F0). Several small location dots (6px diameter) placed on the globe surface in blue (#3B82F6) representing different regions. Thin curved connection lines (1px stroke, #60A5FA at 60% opacity) arc between the dots showing connectivity. A subtle ring orbiting the globe (1px dashed stroke, #CBD5E1) suggests worldwide reach. Small floating elements around the globe: tiny plane icon, wifi symbol, location pin — all in muted blue tones. The globe has a very subtle shadow underneath (0 4px 12px rgba(0,0,0,0.06)). Clean vector style, generous white space. Connected, worldwide, accessible.",
-      "style": {
-        "lighting": "Flat with very subtle depth shadow",
-        "detail_level": "medium-high",
-        "ui_fidelity": "Polished infographic illustration",
-        "mood": "Connected, expansive, accessible",
-        "color_temperature": "Neutral with cool blue accents",
-        "focal_point": "Center — the globe with connection points"
-      }
-    },
-    {
-      "id": "info_savings",
-      "section": "infographic_icons",
-      "title": "Cost Savings",
-      "aspect_ratio": "1:1",
-      "prompt": "A larger infographic illustration on a pure white background (#FFFFFF) showing cost savings. Central element is a stylized piggy bank or coin stack — simplified geometric shapes with 1.5px stroke in blue (#3B82F6). A prominent downward arrow (emerald #10B981, 2px stroke) next to a dollar/currency symbol indicating cost reduction. Small floating coins (circles with line detail) in various sizes scattered around, some in blue, some in light gray (#CBD5E1), suggesting money saved. A small percentage badge showing '-30%' or similar in a rounded rectangle (emerald background, white text). Subtle decorative elements: small sparkles, tiny checkmarks. The composition conveys savings and financial benefit. Clean vector style, generous margins. No heavy shadows. Economical, beneficial, smart.",
-      "style": {
-        "lighting": "Flat, even lighting",
-        "detail_level": "medium-high",
-        "ui_fidelity": "Polished infographic illustration",
-        "mood": "Economical, beneficial, rewarding",
-        "color_temperature": "Neutral with blue and green accents",
-        "focal_point": "Center — the savings indicator with downward arrow"
-      }
-    },
-    {
-      "id": "info_time",
+      "id": "info_time_saved",
       "section": "infographic_icons",
       "title": "Time Saved",
       "aspect_ratio": "1:1",
-      "prompt": "A larger infographic illustration on a pure white background (#FFFFFF) showing time efficiency. Central element is a clock face — a circle (72px diameter) with 1.5px stroke in blue (#3B82F6), simple hour markers (small lines at 12, 3, 6, 9 positions), and two hands pointing to roughly 10:10. A fast-forward or speed indicator element: two small chevrons (>>) in emerald (#10B981) next to the clock suggesting acceleration. Motion lines (1px stroke, #CBD5E1) behind the clock suggesting speed. Small floating elements: tiny hourglass, stopwatch icon, lightning bolt — all in muted tones. A small badge showing 'Save 5hrs/week' or similar time stat. The clock has subtle light blue fill (#DBEAFE at 15% opacity). Clean vector style, generous white space. No heavy shadows. Efficient, fast, valuable.",
+      "prompt": "An icon on white background (#FFFFFF) showing time efficiency: a clock (40px circle) with primary blue (#3B82F6) outline (1.5px stroke) and simple hands at 10:10 position. A small double-chevron (>>) in secondary green (#10B981) sits beside the clock suggesting fast-forward/speed. Light blue fill inside the clock at 12% opacity. Generous white space. Rounded stroke caps on all elements.",
       "style": {
-        "lighting": "Flat with subtle motion indication",
-        "detail_level": "medium-high",
-        "ui_fidelity": "Polished infographic illustration",
-        "mood": "Efficient, fast, time-saving",
-        "color_temperature": "Neutral with blue and green accents",
-        "focal_point": "Center — the clock with speed indicators"
-      }
-    },
-    {
-      "id": "info_users",
-      "section": "infographic_icons",
-      "title": "Active Users",
-      "aspect_ratio": "1:1",
-      "prompt": "A larger infographic illustration on a pure white background (#FFFFFF) showing user community. Central element is a group of 5-7 simplified user avatars — circles (varying sizes: 32px, 40px, 48px) with simple person silhouettes inside. The avatars slightly overlap, creating a clustered community feel. Primary avatar in front uses blue fill (#3B82F6), others use various tints: light blue (#DBEAFE), light gray (#F1F5F9), and outlined styles. Small activity indicators: tiny green dots (online status), small notification badges, chat bubbles — suggesting active engagement. A subtle arc or wave shape behind the group in very light blue (#DBEAFE at 30% opacity) creates cohesion. All avatars use 1.5px strokes where outlined. Clean vector style, generous margins. Community-focused, active, engaged.",
-      "style": {
-        "lighting": "Flat, even lighting",
-        "detail_level": "medium-high",
-        "ui_fidelity": "Polished infographic illustration",
-        "mood": "Community-focused, active, social",
-        "color_temperature": "Neutral with cool blue accents",
-        "focal_point": "Center — the clustered user avatars"
-      }
-    },
-    {
-      "id": "info_uptime",
-      "section": "infographic_icons",
-      "title": "Reliability Uptime",
-      "aspect_ratio": "1:1",
-      "prompt": "A larger infographic illustration on a pure white background (#FFFFFF) showing reliability and uptime. Central element is a server/database icon — a rounded rectangle stack (3 stacked shapes suggesting server rack) with 1.5px stroke in blue (#3B82F6). A prominent checkmark or shield overlay in emerald (#10B981) indicating verified/protected status. Small status indicator lights on the server (tiny circles: green for active, subtle gray for others). A circular badge nearby showing '99.9%' in bold typography (blue or emerald). Subtle uptime graph element: a flat horizontal line suggesting consistent availability, with tiny pulse/heartbeat indicator. Small floating elements: wifi signal, lightning bolt (power), shield — all in muted tones. Clean vector style, generous white space. Reliable, stable, trustworthy.",
-      "style": {
-        "lighting": "Flat, even, professional",
-        "detail_level": "medium-high",
-        "ui_fidelity": "Polished infographic illustration",
-        "mood": "Reliable, stable, enterprise-grade",
-        "color_temperature": "Neutral with blue and green accents",
-        "focal_point": "Center — the server with uptime indicator"
+        "lighting": "Flat",
+        "detail_level": "medium",
+        "ui_fidelity": "Infographic icon style",
+        "mood": "Efficient, time-conscious",
+        "color_temperature": "Cool",
+        "focal_point": "Clock with fast-forward chevrons"
       }
     }
   ]
