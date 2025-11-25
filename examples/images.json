@@ -5,155 +5,179 @@
       "section": "hero",
       "title": "SaaS Dashboard Hero",
       "aspect_ratio": "16:9",
-      "prompt": "A sleek SaaS-style hero image showing a modern analytics dashboard. In the center, a large dashboard interface with rounded corners on a dark gradient background. The dashboard displays clean data visualizations: a line chart showing growth, key metric cards, and a minimal sidebar navigation. Floating UI elements around the main dashboard suggest depth and interactivity. Style: modern fintech UI, dark mode with soft purple and blue gradients, ultra clean, high resolution, no people, no logos.",
+      "prompt": "A premium SaaS dashboard interface floating on a deep blue-black gradient background (#050816 to #0A0F1E, 135-degree angle). The main dashboard is a large rounded-rectangle card (24px corner radius) with a semi-transparent dark surface (#1F2937 at 95% opacity) and subtle white border (8% opacity). Inside the card: a clean sidebar on the left with outlined icons (1.5px stroke, white), a header row with metric cards, and a central area with a smooth line chart trending upward. The line chart uses indigo (#6366F1) with a soft glow (20px blur, 40% opacity). Three smaller stat cards float beside the main dashboard, each with 16px corner radius, casting soft shadows downward-right. A subtle 32px grid pattern (1px white lines at 10% opacity) covers the background. Accent colors: indigo (#6366F1) for primary data, cyan (#22D3EE) for secondary highlights. Light source from top-left. Geometric sans-serif typography. No people, no logos, no text sentences.",
       "style": {
-        "lighting": "soft, slightly glowy neon highlights",
+        "lighting": "Top-left soft key light, diffuse fill from bottom-right, indigo glow on focal elements",
         "detail_level": "high",
-        "ui_fidelity": "very high, believable product UI",
-        "mood": "confident, technical, calm"
+        "ui_fidelity": "Production-quality UI mockup with realistic shadows and highlights",
+        "mood": "Confident, premium, intelligent",
+        "color_temperature": "Cool, blue-dominant",
+        "focal_point": "Main dashboard card, positioned slightly left of center"
       }
     },
     {
       "id": "feature_analytics",
       "section": "features",
-      "title": "Analytics Feature Visual",
+      "title": "Analytics Network Visualization",
       "aspect_ratio": "16:9",
-      "prompt": "A modern fintech-style infographic showing data analytics capabilities. A stylized network of connected nodes on a dark background, with several nodes highlighted showing different metrics: revenue growth, user engagement, conversion rates. Thin glowing lines connect the data points, suggesting data flow. Style: flat vector illustration with neon blue, teal and violet accents, dark navy background, minimal text, clean and data-driven.",
+      "prompt": "An abstract data visualization on a deep blue-black gradient background (#050816 to #0A0F1E, 135-degree angle). A network of 12-15 nodes connected by smooth bezier curves (1.5px stroke weight, cyan #22D3EE). Nodes are small rounded squares (8px radius) with soft indigo glow (20px blur, 40% opacity). Three central nodes are larger and brighter, representing key metrics, with concentric glow rings suggesting activity. Connection lines have gradient opacity (solid at source, fading to 30% at destination) showing data flow direction. A subtle 32px grid pattern (1px white lines at 10% opacity) in the background. Small floating labels near nodes use uppercase geometric sans-serif text (medium weight). Primary accent: indigo #6366F1. Secondary accent: cyan #22D3EE. All shadows fall down-right. No people, no logos.",
       "style": {
-        "lighting": "subtle glow on highlights",
+        "lighting": "Ambient glow from nodes, subtle top-left bias, no harsh shadows",
         "detail_level": "medium-high",
-        "ui_fidelity": "diagram/infographic, not real UI",
-        "mood": "analytical, networked, intelligent"
+        "ui_fidelity": "Abstract diagram, not realistic UI",
+        "mood": "Analytical, networked, intelligent",
+        "color_temperature": "Cool, cyan-indigo dominant",
+        "focal_point": "Central cluster of three bright nodes"
       }
     },
     {
       "id": "feature_reports",
       "section": "features",
-      "title": "Automated Reports Feature",
+      "title": "Report Generation Interface",
       "aspect_ratio": "4:3",
-      "prompt": "A close-up product mockup of a report generation interface. The interface is a white card on a dark gradient background. At the top, a header showing 'Monthly Report'. Below, a preview of a generated report with charts, tables, and key insights. The UI is minimal, with rounded corners, subtle shadows, and clean typography. Style: modern SaaS product shot, no people.",
+      "prompt": "A floating report interface card on a deep blue-black gradient background (#050816 to #0A0F1E, 135-degree angle). The main card is white (#FFFFFF at 95% opacity) with 16px corner radius and soft shadow falling down-right (elevation level 3). Inside: a header bar with 'Report' label in bold geometric sans-serif, a mini bar chart using indigo (#6366F1) bars with subtle glow, a data table with alternating row backgrounds, and summary metric boxes at the bottom. Two smaller cards float nearby at different depths, showing related charts. All cards share identical 16px corner radius and shadow direction. Thin border on cards (1px, white at 8% opacity). A subtle 32px grid visible in background. Accent highlights in cyan (#22D3EE). Light source from top-left. No people, no logos, minimal text labels only.",
       "style": {
-        "lighting": "even, product shot style",
+        "lighting": "Soft top-left key light, white cards appear to glow against dark background",
         "detail_level": "high",
-        "ui_fidelity": "high, realistic web UI",
-        "mood": "precise, professional, trustworthy"
+        "ui_fidelity": "High-fidelity product UI mockup",
+        "mood": "Precise, professional, trustworthy",
+        "color_temperature": "Cool with warm white card surfaces",
+        "focal_point": "Main report card, centered"
       }
     },
     {
       "id": "feature_integrations",
       "section": "features",
-      "title": "Integrations Ecosystem",
+      "title": "Integration Hub Diagram",
       "aspect_ratio": "4:3",
-      "prompt": "A visual showing an integration ecosystem. In the center, a glowing hub icon representing the main platform. Around it, connected by thin curved lines, generic icons representing different services: database, cloud storage, messaging, analytics, CRM. Each connection has a subtle pulse animation effect (shown as gradient along the line). Dark background with the brand color accents. Style: clean, technical diagram.",
+      "prompt": "A hub-and-spoke integration diagram on a deep blue-black gradient background (#050816 to #0A0F1E, 135-degree angle). In the center, a glowing rounded square (24px radius) representing the platform core, with indigo (#6366F1) fill and pulsing glow effect (concentric rings fading outward, 20px blur). Eight satellite nodes arranged in a circle around the hub, each a smaller rounded square (12px radius) with dark surface (#1F2937) and 1px white border (8% opacity). Smooth bezier curves (1.5px cyan #22D3EE strokes) connect hub to satellites, with gradient opacity showing flow direction. Each satellite has a simple outlined icon (1.5px stroke): database cylinder, cloud, envelope, chart bars, gear, bracket-code, lightning bolt, bell. Subtle 32px grid in background. All shadows down-right. No people, no logos.",
       "style": {
-        "lighting": "soft, slightly dramatic from center",
+        "lighting": "Central glow radiating outward, subtle ambient from top-left",
         "detail_level": "high",
-        "ui_fidelity": "high, realistic",
-        "mood": "connected, powerful, modern"
+        "ui_fidelity": "Technical diagram with polished finish",
+        "mood": "Connected, powerful, systematic",
+        "color_temperature": "Cool, indigo-cyan dominant",
+        "focal_point": "Central glowing hub node"
       }
     },
     {
       "id": "feature_automation",
       "section": "features",
-      "title": "Workflow Automation",
+      "title": "Workflow Automation Flow",
       "aspect_ratio": "4:3",
-      "prompt": "A clean horizontal flow diagram on a dark gradient background representing workflow automation. On the left, an icon representing a trigger event. In the middle, a series of connected action nodes with icons for different operations: filter, transform, notify, save. On the right, multiple output endpoints. Thin curved arrows connect all elements. The whole diagram is minimalist, with neon blue and teal accents, thin white lines. No clutter, no extra text.",
+      "prompt": "A horizontal workflow diagram on a deep blue-black gradient background (#050816 to #0A0F1E, 135-degree angle). Five sequential nodes arranged left-to-right: trigger (lightning icon), filter (funnel icon), transform (arrows icon), action (gear icon), output (checkmark icon). Each node is a rounded square (16px radius) with dark surface (#1F2937), 1px white border (8% opacity), and contains a centered outlined icon (1.5px stroke, white). Smooth bezier curves (1.5px stroke) connect nodes sequentially, using cyan (#22D3EE) with gradient opacity showing flow direction left-to-right. The central 'transform' node has a subtle indigo glow (20px blur, #6366F1 at 40% opacity) indicating focus. Small uppercase labels below each node. Subtle 32px grid in background. All shadows fall down-right. No people, no logos.",
       "style": {
-        "lighting": "neutral, clear",
+        "lighting": "Even ambient light, subtle glow on central node, top-left bias",
         "detail_level": "high",
-        "ui_fidelity": "high",
-        "mood": "efficient, structured"
+        "ui_fidelity": "Clean technical diagram",
+        "mood": "Efficient, logical, structured",
+        "color_temperature": "Cool, balanced cyan and white",
+        "focal_point": "Central transform node with glow"
       }
     },
     {
       "id": "architecture_flow",
       "section": "how_it_works",
-      "title": "Platform Architecture Flow",
+      "title": "Platform Architecture Overview",
       "aspect_ratio": "16:9",
-      "prompt": "A clean horizontal architecture diagram on a dark gradient background. On the left, icons representing data sources (API, webhooks, files). In the middle, a glowing rounded square labeled 'Processing Engine', surrounded by tiny icons of gears, filters, and analytics. On the right, output destinations (dashboard, exports, notifications). Thin curved arrows show data flow. Minimalist style with neon blue and teal accents.",
+      "prompt": "A three-column architecture diagram on a deep blue-black gradient background (#050816 to #0A0F1E, 135-degree angle). LEFT column: three stacked input nodes (API, webhook, file icons) as rounded squares (12px radius, dark #1F2937 surface). CENTER: a large processing engine card (24px radius) with indigo (#6366F1) border glow (20px blur, 40% opacity), containing small gear and filter icons inside. RIGHT column: three stacked output nodes (dashboard, download, bell icons). Smooth bezier curves (1.5px cyan #22D3EE stroke) flow from left nodes into center, then from center to right nodes, with gradient opacity showing direction. Column labels in uppercase geometric sans-serif: 'INPUT', 'PROCESS', 'OUTPUT'. Subtle 32px grid pattern. All elements cast soft shadows down-right. No people, no logos.",
       "style": {
-        "lighting": "subtle glow on the central node",
+        "lighting": "Central engine has primary glow, ambient top-left light",
         "detail_level": "medium-high",
-        "ui_fidelity": "diagram, not app UI",
-        "mood": "technical, clear, infrastructural"
+        "ui_fidelity": "Technical architecture diagram",
+        "mood": "Technical, clear, systematic",
+        "color_temperature": "Cool, indigo-cyan balanced",
+        "focal_point": "Central processing engine card"
       }
     },
     {
       "id": "chart_growth",
       "section": "social_proof",
-      "title": "Growth Metrics Chart",
+      "title": "Growth Metrics Visualization",
       "aspect_ratio": "4:3",
-      "prompt": "A simple, modern chart placed inside a fintech-style dashboard card on a dark background. The card shows a line chart with an upward trend, showing growth over 12 months. Key data points are highlighted with glowing dots. Below the chart, small metric cards showing percentage increases. Around the chart, faint grid lines and subtle numeric labels. Style: minimalist, data-driven, no 3D effects.",
+      "prompt": "A dashboard card showing growth metrics on a deep blue-black gradient background (#050816 to #0A0F1E, 135-degree angle). Main card is dark surface (#1F2937) with 16px corner radius, 1px white border (8% opacity), soft shadow down-right. Inside: a smooth line chart with upward trend using indigo (#6366F1) stroke (2px weight) and subtle area fill (gradient to transparent). Five data points marked with glowing dots (8px, indigo with 20px glow blur). X-axis shows abbreviated month labels, Y-axis shows values. Below the chart, three small metric cards in a row, each with 12px radius, showing percentage values with cyan (#22D3EE) accent for positive indicators. Subtle 32px grid visible in card background. Geometric sans-serif typography. No people, no logos.",
       "style": {
-        "lighting": "subtle vignette, focus on chart",
+        "lighting": "Soft top-left, chart line has subtle glow, data points emit light",
         "detail_level": "medium",
-        "ui_fidelity": "high, dashboard-like",
-        "mood": "analytical, optimistic"
+        "ui_fidelity": "High-fidelity dashboard component",
+        "mood": "Optimistic, analytical, data-driven",
+        "color_temperature": "Cool with warm success indicators",
+        "focal_point": "Line chart with glowing data points"
       }
     },
     {
       "id": "pricing_tiers",
       "section": "pricing",
-      "title": "Pricing Tier Cards",
+      "title": "Pricing Comparison Cards",
       "aspect_ratio": "16:9",
-      "prompt": "Three vertical pricing tiles side by side on a clean dark-to-light gradient background. Left tile labeled 'Starter', middle tile 'Pro' (highlighted), right tile 'Enterprise'. Each tile is a rounded card with a simple icon at the top. Below each icon, a price placeholder. The Pro tier has a subtle glow effect indicating it's recommended. Colors: white or very light surface cards with subtle shadows, accented by brand colors for highlights.",
+      "prompt": "Three pricing cards side-by-side on a deep blue-black gradient background (#050816 to #0A0F1E, 135-degree angle). All cards are white (#FFFFFF at 95% opacity) with 16px corner radius, casting soft shadows down-right. LEFT card (Starter): simple seed icon at top (outlined, 1.5px stroke, gray #6B7280), price below, subtle styling. CENTER card (Pro): slightly elevated with purple (#A855F7) glow border (20px blur, 30% opacity), star icon at top (outlined, 1.5px stroke, purple), 'POPULAR' tag in top corner. RIGHT card (Enterprise): building icon at top (outlined, gray), larger price. Cards spaced evenly with 32px gaps. Inside each card: icon, tier name in bold, price in large numerals, three feature bullets with small checkmarks. Geometric sans-serif typography throughout. No people, no logos.",
       "style": {
-        "lighting": "soft, even",
+        "lighting": "Even top-left lighting, center card has accent glow",
         "detail_level": "medium",
-        "ui_fidelity": "high, stylized pricing UI",
-        "mood": "simple, transparent, premium"
+        "ui_fidelity": "High-fidelity pricing UI",
+        "mood": "Clear, transparent, premium",
+        "color_temperature": "Cool with purple accent on featured tier",
+        "focal_point": "Center 'Pro' card with glow"
       }
     },
     {
       "id": "comparison_visual",
       "section": "comparison",
-      "title": "Before/After Comparison",
+      "title": "Before and After Transformation",
       "aspect_ratio": "16:9",
-      "prompt": "Two comparison cards side by side on a dark neutral background. Left card labeled 'Before' with a cluttered, messy interface mockup showing scattered data and confusing navigation. Right card labeled 'After' with a clean, organized dashboard showing the same data but beautifully structured. The 'After' card has a subtle glow. Style: flat, vector-like, showing clear contrast between chaos and order.",
+      "prompt": "Two interface cards side-by-side on a deep blue-black gradient background (#050816 to #0A0F1E, 135-degree angle). LEFT card labeled 'Before': dark surface (#1F2937), 16px radius, contains a chaotic arrangement of misaligned elements — scattered chart fragments, overlapping text blocks, inconsistent spacing, no clear hierarchy, desaturated gray tones. A subtle red-orange tint (#F59E0B at 10% opacity) overlay. RIGHT card labeled 'After': white surface (#FFFFFF at 95% opacity), 16px radius, contains the same information beautifully organized — aligned grid, clear hierarchy, proper spacing, clean chart, organized metrics. The 'After' card has a subtle indigo glow (20px blur, #6366F1 at 30% opacity). Labels above each card in uppercase geometric sans-serif. Arrow or transformation indicator between cards. Shadows fall down-right. No people, no logos.",
       "style": {
-        "lighting": "subtle spotlight on After card",
+        "lighting": "Even ambient light, 'After' card has positive glow",
         "detail_level": "medium",
-        "ui_fidelity": "conceptual cards, not real UI",
-        "mood": "comparative, clear, persuasive"
+        "ui_fidelity": "Conceptual comparison mockup",
+        "mood": "Transformative, persuasive, clear contrast",
+        "color_temperature": "Cool, with subtle warm warning on 'Before'",
+        "focal_point": "The 'After' card with its glow"
       }
     },
     {
       "id": "developer_code",
       "section": "developers",
-      "title": "Developer API Visual",
+      "title": "Developer API Experience",
       "aspect_ratio": "16:9",
-      "prompt": "A high-end developer-focused visual of a code editor window floating on a dark gradient background. The editor shows highlighted code for an API integration, with syntax highlighting in teal, purple, and blue. On the right side, a response preview panel showing JSON data. Subtle icons for API, documentation, and terminal around the editor. Style: dark editor theme, developer tooling aesthetic.",
+      "prompt": "A code editor window floating on a deep blue-black gradient background (#050816 to #0A0F1E, 135-degree angle). The editor is a dark card (#111827) with 16px corner radius and soft shadow down-right. Window has three colored dots in top-left corner (red, yellow, green, small circles). Code inside uses syntax highlighting: keywords in purple (#A855F7), strings in cyan (#22D3EE), functions in indigo (#6366F1), comments in gray (#6B7280). Code shows a simple API call pattern with clean formatting. To the right of the editor, a smaller response preview panel (12px radius, dark #1F2937 surface) showing formatted JSON output with cyan (#22D3EE) keys. Three small floating icons around the scene: terminal bracket, document, gear — all outlined (1.5px stroke, white at 60% opacity). Subtle 32px grid in far background. Geometric monospace font for code. No people, no logos.",
       "style": {
-        "lighting": "focused glow on code area",
+        "lighting": "Subtle glow from code editor, ambient top-left light",
         "detail_level": "high",
-        "ui_fidelity": "developer tooling look",
-        "mood": "technical, empowering"
+        "ui_fidelity": "Realistic developer tooling aesthetic",
+        "mood": "Technical, empowering, precise",
+        "color_temperature": "Cool with syntax color accents",
+        "focal_point": "Main code editor window"
       }
     },
     {
       "id": "mobile_app",
       "section": "mobile",
-      "title": "Mobile App Preview",
+      "title": "Mobile Dashboard Experience",
       "aspect_ratio": "9:16",
-      "prompt": "A smartphone mockup in portrait orientation on a dark blurred background. The phone screen shows a mobile dashboard UI with key metrics at the top, a mini chart in the middle, and quick action buttons at the bottom. The design is very clean and minimal, with rounded elements and clear hierarchy. Slight glow around the phone to suggest premium quality. No brand logos, generic but polished icons.",
+      "prompt": "A smartphone mockup in portrait orientation on a deep blue-black gradient background (#050816 to #0A0F1E, 135-degree angle). Phone frame is dark (#1F2937) with 24px corner radius and soft shadow falling down-right. Screen shows a mobile dashboard: status bar at top, three metric cards in a row (12px radius each) with indigo (#6366F1) accent numbers, a mini line chart in the center with cyan (#22D3EE) line and subtle glow on data points, and three action buttons at bottom (rounded rectangles, 12px radius, indigo fill with white icons). The phone has a subtle outer glow (30px blur, indigo at 20% opacity) suggesting premium quality. Small floating notification badges near the phone (8px radius circles). UI uses geometric sans-serif typography. Consistent 8px spacing grid throughout interface. No people, no logos, no brand marks on phone.",
       "style": {
-        "lighting": "subtle glow around phone",
+        "lighting": "Phone screen as light source, ambient top-left fill",
         "detail_level": "high",
-        "ui_fidelity": "high, realistic mobile UI",
-        "mood": "fast, convenient, modern"
+        "ui_fidelity": "High-fidelity mobile UI mockup",
+        "mood": "Modern, accessible, premium",
+        "color_temperature": "Cool with screen warmth",
+        "focal_point": "Phone screen with dashboard"
       }
     },
     {
       "id": "testimonials_bg",
       "section": "testimonials",
-      "title": "Abstract Background for Testimonials",
+      "title": "Abstract Network Background",
       "aspect_ratio": "16:9",
-      "prompt": "A soft, abstract background illustration for a testimonials section. Stylized network of thin glowing lines and small nodes, creating a subtle tech pattern. A few nodes are slightly brighter, suggesting connection points. Faint grid lines and subtle circular gradients. Colors are muted purples, navy, and teal, low contrast so overlaid text remains readable. No UI elements, just an elegant tech atmosphere.",
+      "prompt": "A subtle abstract background on a deep blue-black gradient (#050816 to #0A0F1E, 135-degree angle). A sparse network of thin connection lines (1px stroke, white at 15% opacity) with smooth bezier curves spanning the composition. Small node dots (4px diameter) at intersections, some with faint indigo glow (#6366F1 at 20% opacity, 20px blur). Three nodes slightly brighter than others, suggesting connection points. A subtle 32px grid pattern (1px white at 5% opacity) creates depth. Soft circular gradient overlays in the corners using muted indigo and cyan (at 10% opacity) add subtle color variation. Very low contrast overall — designed as a background that won't compete with overlaid text or testimonial cards. No UI elements, no icons, no text, no people, no logos.",
       "style": {
-        "lighting": "gentle, low contrast",
-        "detail_level": "medium",
-        "ui_fidelity": "background illustration",
-        "mood": "elegant, trustworthy, tech-forward"
+        "lighting": "Very subtle ambient glow from scattered nodes",
+        "detail_level": "low-medium",
+        "ui_fidelity": "Abstract background texture",
+        "mood": "Elegant, subtle, trustworthy",
+        "color_temperature": "Cool, muted, low saturation",
+        "focal_point": "No single focal point — even distribution for background use"
       }
     }
   ]

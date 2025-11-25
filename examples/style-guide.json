@@ -1,41 +1,165 @@
 {
   "style_guide": {
-    "brand_keywords": [
-      "modern SaaS",
-      "fintech",
-      "clean",
-      "minimal",
-      "data-driven",
-      "professional"
-    ],
-    "palette": {
-      "background": ["#050816", "#060818", "#0B1020"],
-      "primary_accents": ["#4F46E5", "#6366F1", "#22D3EE"],
-      "secondary_accents": ["#06B6D4", "#A855F7"],
-      "neutrals": ["#FFFFFF", "#E5E7EB", "#9CA3AF", "#4B5563"]
+    "brand_essence": {
+      "keywords": ["precision", "clarity", "intelligence", "premium", "trustworthy"],
+      "personality": "A sophisticated data platform that feels like a high-end instrument — precise, powerful, yet approachable. Think Bloomberg Terminal meets Linear's elegance.",
+      "visual_metaphor": "Light emerging from structured darkness — data illuminating decisions"
     },
-    "ui_style": {
-      "mode": "dark-first with light surfaces",
-      "shapes": "rounded-rectangle cards, subtle depth, soft shadows",
-      "charts": "simple, flat, no heavy 3D, clear labels",
-      "icons": "thin line icons, geometric, minimal"
+
+    "color_system": {
+      "backgrounds": {
+        "deep": "#050816",
+        "medium": "#0A0F1E",
+        "elevated": "#111827",
+        "gradient_direction": "135deg (top-left to bottom-right)",
+        "gradient_formula": "linear-gradient(135deg, #050816 0%, #0A0F1E 50%, #111827 100%)"
+      },
+      "surfaces": {
+        "card_dark": "#1F2937",
+        "card_light": "#FFFFFF",
+        "card_opacity": "cards use 95% opacity with subtle backdrop blur",
+        "border": "rgba(255,255,255,0.08)"
+      },
+      "accents": {
+        "primary": "#6366F1",
+        "primary_glow": "#818CF8",
+        "secondary": "#22D3EE",
+        "secondary_glow": "#67E8F9",
+        "tertiary": "#A855F7",
+        "success": "#10B981",
+        "warning": "#F59E0B"
+      },
+      "text": {
+        "primary": "#FFFFFF",
+        "secondary": "#9CA3AF",
+        "muted": "#6B7280",
+        "on_accent": "#FFFFFF"
+      },
+      "usage_rules": [
+        "Primary indigo (#6366F1) for interactive elements and key focal points",
+        "Cyan (#22D3EE) for data flows, connections, and secondary highlights",
+        "Purple (#A855F7) sparingly for premium/featured indicators",
+        "Never mix more than 2 accent colors in a single composition"
+      ]
     },
-    "typography_feel": [
-      "bold, confident headings",
-      "light, readable body",
-      "inspired by Stripe / Linear / Vercel"
+
+    "geometry": {
+      "corner_radius": {
+        "small": "8px — buttons, tags, small elements",
+        "medium": "12px — input fields, small cards",
+        "large": "16px — main cards, panels",
+        "xl": "24px — hero cards, modal containers"
+      },
+      "shapes": "Exclusively rounded rectangles. No circles except for status dots and avatars. No sharp corners anywhere.",
+      "aspect_ratios": {
+        "cards": "Slightly taller than wide (roughly 4:5 or 3:4)",
+        "feature_panels": "Wide horizontal (16:9)",
+        "icon_containers": "Square with large radius"
+      }
+    },
+
+    "depth_system": {
+      "elevation_0": "Flat on background, no shadow",
+      "elevation_1": "Subtle lift: 0 1px 2px rgba(0,0,0,0.3), 0 1px 3px rgba(0,0,0,0.15)",
+      "elevation_2": "Cards: 0 4px 6px rgba(0,0,0,0.3), 0 2px 4px rgba(0,0,0,0.2)",
+      "elevation_3": "Floating: 0 10px 25px rgba(0,0,0,0.4), 0 6px 10px rgba(0,0,0,0.3)",
+      "glow_primary": "0 0 20px rgba(99,102,241,0.4), 0 0 40px rgba(99,102,241,0.2)",
+      "glow_cyan": "0 0 20px rgba(34,211,238,0.4), 0 0 40px rgba(34,211,238,0.2)",
+      "glow_subtle": "0 0 30px rgba(99,102,241,0.15)",
+      "rules": [
+        "All floating elements have consistent soft shadow falling down-right (light from top-left)",
+        "Glows are always diffuse and soft, never harsh",
+        "Maximum 3 elevation levels visible in any composition"
+      ]
+    },
+
+    "line_system": {
+      "weights": {
+        "hairline": "1px — grid lines, subtle dividers",
+        "light": "1.5px — connection lines, flow arrows",
+        "medium": "2px — borders, emphasized lines",
+        "bold": "3px — primary paths, key connections"
+      },
+      "connection_style": "Smooth bezier curves with 40% tension. Never straight angular lines between nodes.",
+      "grid_lines": "1px lines at 10% white opacity, 32px spacing",
+      "flow_arrows": "Rounded ends, no sharp arrowheads. Use gradient opacity (solid to transparent) to show direction."
+    },
+
+    "glow_effects": {
+      "node_glow": "Soft 20px blur, accent color at 40% opacity",
+      "line_glow": "8px blur along path, accent color at 30% opacity",
+      "ui_highlight": "Inner glow, 4px blur, white at 10% opacity on top edge",
+      "pulse_effect": "Concentric rings fading outward, used on active/central nodes",
+      "rules": [
+        "Every focal element has exactly one glow source",
+        "Glows always use accent colors, never white",
+        "Glow intensity decreases with distance from focal point"
+      ]
+    },
+
+    "typography_visual": {
+      "headings": "Bold weight (700), tight letter-spacing (-0.02em), large size contrast",
+      "body": "Regular weight (400), comfortable letter-spacing (0), generous line-height (1.6)",
+      "labels": "Medium weight (500), slightly condensed, uppercase for categories",
+      "numbers": "Tabular figures, medium weight, often larger than surrounding text",
+      "style": "Sans-serif only. Geometric grotesque feel (like Inter, SF Pro, or Geist).",
+      "in_images": "Minimal text. When present: short labels only, never sentences. Use hierarchy through size, not font variation."
+    },
+
+    "iconography": {
+      "style": "Outlined icons, 1.5px stroke weight, rounded caps and joins",
+      "size": "Consistent 24px base size, scales to 32px for emphasis, 20px for dense UI",
+      "fill": "Never filled. Outline only with accent color or white.",
+      "common_icons": {
+        "data": "Three ascending bars",
+        "flow": "Horizontal arrow with nodes",
+        "settings": "Gear with rounded teeth",
+        "api": "Angled brackets < >",
+        "cloud": "Simple cloud outline",
+        "chart": "Trending line going up-right"
+      }
+    },
+
+    "composition": {
+      "focal_point": "Every image has ONE clear focal point, slightly above and left of center",
+      "balance": "Asymmetric balance. Primary element 60% of composition, supporting elements 40%.",
+      "negative_space": "Generous margins. At least 15% padding from edges.",
+      "layering": "Maximum 3 distinct layers: background, midground (supporting), foreground (focal)",
+      "perspective": "Slight isometric tilt (10-15 degrees) for UI mockups. Flat for diagrams.",
+      "floating_elements": "Secondary elements float around main focal point, never overlapping it"
+    },
+
+    "animation_hints": {
+      "implied_motion": "Use gradient trails and blur direction to suggest gentle, slow movement",
+      "data_flow": "Lines with gradient opacity (solid at source, fading at destination)",
+      "pulse_nodes": "Concentric glow rings suggest active/processing state",
+      "parallax_depth": "Background elements slightly blurred, foreground sharp"
+    },
+
+    "consistency_rules": [
+      "ALL images share the same gradient background direction (135deg)",
+      "ALL cards use the same corner radius (16px large radius)",
+      "ALL glows use the same diffusion (20px blur for nodes, 8px for lines)",
+      "ALL connection lines use the same bezier curve tension",
+      "ALL shadows fall in the same direction (down-right, light from top-left)",
+      "ALL UI elements use the exact same spacing unit (8px base grid)",
+      "Color temperature is always cool (no warm oranges/reds except for warnings)",
+      "Maximum saturation for accents is 80%, never fully saturated"
     ],
-    "visual_motifs": [
-      "abstract network of connected nodes",
-      "data visualization elements",
-      "subtle grid overlays",
-      "glowing accent highlights"
-    ],
+
     "avoid": [
-      "real people or faces",
-      "stock photos",
-      "overly playful cartoons",
-      "clashing color gradients"
+      "Realistic photographs or photographic textures",
+      "Human faces, hands, or figures",
+      "Brand logos or recognizable company symbols",
+      "Harsh shadows with sharp edges",
+      "Pure black (#000000) — always use deep blue-black (#050816)",
+      "Pure white backgrounds — always tinted slightly blue",
+      "Gradients that shift hue (blue-to-green) — only shift lightness",
+      "Busy patterns or noise textures",
+      "3D renders with specular highlights",
+      "Skeuomorphic elements",
+      "More than 3 accent colors per image",
+      "Text-heavy compositions"
     ]
   }
 }
